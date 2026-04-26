@@ -1,7 +1,7 @@
-# Restoring file contents
+# 恢复文件内容
 
-````admonish reset title="Reset your progress" collapsible=true
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置您的进度" collapsible=true
+要重置到本章开头的状态，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s restore
@@ -9,8 +9,8 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-Let's say Alice accidentally deleted the project's `README.md` file.
-After that, she made more changes before realizing her mistake:
+假设 Alice 不小心删除了项目的 `README.md` 文件。
+之后，她在意识到自己的错误之前又做了更多更改：
 
 ```sh
 rm README.md
@@ -49,10 +49,10 @@ Committer: <span class="yellow ">Alice</span> &lt;<span class="yellow ">alice@lo
      <span class="green ">   5</span>: <span class="green ">    print("In soviet Russia, world greets you!")</span>
 </pre>
 
-The tools we've learned about so far don't really help in this situation.
-Alice could `jj undo` the last snapshot, but that would undo her changes to `hello.py` as well.
-The same goes for `jj abandon`.
-Luckily, there's a better way:
+迄今为止我们学到的工具在这种情况下真的帮不上忙。
+Alice 可以 `jj undo` 最后一个快照，但那也会撤销她对 `hello.py` 的更改。
+`jj abandon` 也一样。
+幸运的是，有更好的方法：
 
 ```sh
 jj restore README.md
@@ -75,20 +75,20 @@ Committer: <span class="yellow ">Alice</span> &lt;<span class="yellow ">alice@lo
      <span class="green ">   5</span>: <span class="green ">    print("In soviet Russia, world greets you!")</span>
 </pre>
 
-Perfect, that's just what we wanted!
-`jj restore` on its own restores all changed files in your working copy commit.
-However, if you give it the names of specific files as additional arguments, it will only restore those.
+完美，这正是我们想要的！
+`jj restore` 本身会恢复工作副本提交中所有已更改的文件。
+但是，如果您将特定文件名作为额外参数传递给它，它只会恢复那些文件。
 
-That's not all though, `jj restore` can do more than that.
+不过还不止这些，`jj restore` 还能做更多事情。
 
-We've learned a lot about how to _create_ commits, but not much about what you can do with them.
-We can look at the state of our repository at a given commit by running `jj new <change-id>`, but that's about it.
+我们学了很多关于如何_创建_提交的知识，但关于您能用它们做什么却学得不多。
+我们可以通过运行 `jj new <change-id>` 来查看仓库在某个提交时的状态，但仅此而已。
 
-`jj restore` can not only restore files to their state in the parent of the working copy commit.
-It can restore them to their state in **any commit**.
-You can use the `--from` flag to specify which commit to restore from.
+`jj restore` 不仅可以将文件恢复到工作副本提交的父提交时的状态。
+它还可以将它们恢复到**任何提交**时的状态。
+您可以使用 `--from` 标志来指定从哪个提交恢复。
 
-For example, let's restore `hello.py` to the state where it had a functioning loop, but no translations:
+例如，让我们将 `hello.py` 恢复到它有一个工作循环但没有翻译时的状态：
 
 ```sh
 jj restore --from 'description(substring:"Fix loop syntax")' hello.py
@@ -110,8 +110,8 @@ Committer: <span class="yellow ">Alice</span> &lt;<span class="yellow ">alice@lo
 <span class="red ">   4</span>     : <span class="red ">    print("Bonjour, le monde!")</span>
 </pre>
 
-Fascinating!
-As always when we're done with a task, we should remember to push to the remote.
+太棒了！
+和往常一样，当我们完成任务后，应该记得推送到远程。
 
 ```sh
 jj commit -m "Remove translations"

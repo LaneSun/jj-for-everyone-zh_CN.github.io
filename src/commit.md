@@ -1,7 +1,7 @@
-# Creating a new commit
+# 创建一个新提交
 
-````admonish reset title="Reset your progress" collapsible=true
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置您的进度" collapsible=true
+要将您的进度重置到本章开头，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s commit
@@ -9,45 +9,45 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-Once we are done with a set of changes, we should create a new commit.
-If we don't do that, the next changes we make will be recorded into the same commit as the previous ones.
-That would make it harder to understand the evolution of a project later.
+一旦我们完成了一组更改，我们就应该创建一个新的提交。
+如果我们不这样做，我们所做的下一次更改将会被记录到与前一次更改相同的提交中。
+这将使以后理解项目的演变变得更加困难。
 
-Before we create a new commit, we also need to give a description to the one we've been working on so far.
-Every commit needs to have a description, even if it's a short one.
+在创建新提交之前，我们还需要为到目前为止一直在处理的提交添加描述。
+每个提交都需要有一个描述，即使是很短的描述。
 
-So, there are conceptually two things we need to do now:
-1. Give a description to the changes we just finished making, the ones that were recorded in the existing working-copy (`@`) commit.
-1. Start working on a completely new commit, which is the child of the one we just finished.
+因此，从概念上讲，我们现在需要做两件事：
+1. 为我们刚刚完成更改的现有工作副本（`@`）提交添加描述。
+1. 开始处理一个全新的提交，它是我们刚刚完成的提交的子提交。
 
-```admonish title="A source of confusion if you know Git" collapsible=true
-This tutorial assumes that you have no experience with Git.
-However, if you _have_ used Git before, it might actually be more difficult for you to understand this.
-The reason is that both Git and Jujutsu have a subcommand called `commit`, but they work differently.
+```admonish title="如果您了解 Git，这里可能会产生混淆" collapsible=true
+本教程假设您没有 Git 经验。
+但是，如果您_曾经_使用过 Git，理解这一点实际上可能更困难。
+原因是 Git 和 Jujutsu 都有一个名为 `commit` 的子命令，但它们的工作方式不同。
 
-In Git, changes you make are not recorded automatically into commits.
-Instead, they exist outside of any commit, until you add them to one manually.
-The command `git commit` creates a commit containing the new changes as well as the new commit message.
+在 Git 中，您所做的更改不会自动记录到提交中。
+相反，它们存在于任何提交之外，直到您手动将它们添加到某个提交中。
+命令 `git commit` 会创建一个包含新更改以及新提交消息的提交。
 
-In Jujutsu, there is always a commit already and any changes you make are automatically recorded into it.
-So, the description you type during `jj commit` will be applied to a commit that has already existed for some time.
-The _new_ commit that's being created is completely empty and has no description.
-It's ready for auto-recording of the upcoming changes you will be making.
+在 Jujutsu 中，始终已经存在一个提交，您所做的任何更改都会自动记录到其中。
+因此，您在 `jj commit` 期间输入的描述将被应用到一个已经存在了一段时间的提交上。
+正在创建的_新_提交是完全空的，没有描述。
+它已准备好自动记录您即将做出的更改。
 ```
 
-The command to complete both of these tasks at once is:
+一次性完成这两项任务的命令是：
 
 ```sh
 jj commit
 ```
 
-This will open a text editor so you can write a description for the commit.
-If you followed my instructions during [installation and setup](install.md#installing-a-simple-text-editor), the text editor will be `edit`.
-When you're done writing the description, click on "File", then "Exit", in the menu bar or press <kbd>Ctrl+Q</kbd> to exit the text editor.
-Confirm that you want to save the file by pressing <kbd>Enter</kbd>.
+这将打开一个文本编辑器，以便您为该提交编写描述。
+如果您在[安装与设置](install.md#installing-a-simple-text-editor)期间遵循了我的说明，文本编辑器将是 `edit`。
+写完描述后，点击菜单栏中的 "File"，然后点击 "Exit"，或按 <kbd>Ctrl+Q</kbd> 退出文本编辑器。
+按 <kbd>Enter</kbd> 确认您要保存文件。
 
-You may notice that the text file doesn't start empty.
-It already contains a few lines:
+您可能会注意到文本文件开头不是空的。
+它已经包含了几行：
 
 ```
 JJ: This commit contains the following changes:
@@ -56,12 +56,12 @@ JJ:
 JJ: Lines starting with "JJ:" (like this one) will be removed.
 ```
 
-These lines starting with `JJ:` are _comments_, similar to lines starting with a pound `#` in the terminal.
-They will not be part of the final commit description, so you don't need to delete them.
-Jujutsu uses these comments to remind you which files you modified when working on this commit.
-That can be helpful inspiration for a good commit description.
+这些以 `JJ:` 开头的行是_注释_，类似于终端中以井号 `#` 开头的行。
+它们不会成为最终提交描述的一部分，因此您无需删除它们。
+Jujutsu 使用这些注释来提醒您在处理此提交时修改了哪些文件。
+这对于构思好的提交描述是有帮助的提示。
 
-Here's an example description you could type (or copy-paste) into the text editor:
+以下是一个您可以在文本编辑器中输入（或复制粘贴）的示例描述：
 
 ```
 Add readme with project title
@@ -74,47 +74,47 @@ prefixed `#` symbol.
 ```
 
 
-There is a little bit of structure here that you should follow.
-The first line of the description is called the **subject**.
-Sometimes the subject line is all you need, but to describe your changes in more detail, you can follow it up with a **body**.
-Subject and body are **separated by an empty line**.
-Both of them should **not exceed 72 characters** per line.
+这里有一些您应该遵循的结构规则。
+描述的第一行称为**主题**。
+有时主题行就足够了，但要更详细地描述您的更改，您可以在其后跟随一个**正文**。
+主题和正文之间**用一个空行分隔**。
+两者每行都**不应超过 72 个字符**。
 
-Commit messages are important, because they make it easier for you and others to understand the changes and their motivation later on.
-This importance lies on a spectrum:
-The more people work on a project and the longer-lived it is, the more important good commit messages become.
-For example, the Linux kernel is a multi-decade project with thousands of people working on it together.
-Linux developers put a lot of thought and effort into good commit messages.
-On the other extreme of the spectrum may be a student's repository for storing the homework of a single lecture.
-The project is over within a couple of months and there is little chance of the student ever digging into the history, let alone anyone else.
-That student probably won't invest much time into good commit messages.
+提交消息很重要，因为它们使您和其他人以后更容易理解更改及其动机。
+这种重要性存在于一个频谱上：
+一个项目上工作的人越多、项目存在的时间越长，好的提交消息就越重要。
+例如，Linux 内核是一个历时数十年的项目，有成千上万的人共同参与。
+Linux 开发者在优秀的提交消息上投入了大量的思考和精力。
+频谱的另一端可能是学生用于存储单门课程作业的仓库。
+该项目在几个月内就结束了，学生深入查看历史记录的可能性很小，更不用说其他人了。
+那位学生可能不会在好的提交消息上投入太多时间。
 
-```admonish info title="More tips for good commit messages" collapsible=true
-Here are some additional conventions that are good practice for any type of project.
+```admonish info title="编写好的提交消息的更多技巧" collapsible=true
+以下是一些对任何类型的项目都是良好实践的额外惯例。
 
-**Try to keep the subject line below 50 characters**\
-While 72 characters is the hard limit, the subject line usually benefits from being as concise as possible.
-It is shown in many places where space is scarce and people want to get a general idea of your changes without reading too much.
-If you find yourself exceeding 50 characters regularly, you may be combining multiple unrelated changes into a single commit.
-If you put unrelated changes into separate commits, finding concise subject lines becomes easier.
-However, there are often situations where 50 characters is just too restrictive, so don't worry about going above when necessary.
+**尽量将主题行控制在 50 个字符以内**\
+虽然 72 个字符是硬性限制，但主题行通常受益于尽可能简洁。
+它显示在许多空间稀缺的地方，人们希望在不阅读太多内容的情况下了解您更改的大致内容。
+如果您发现自己经常超过 50 个字符，您可能将多个不相关的更改合并到了一个提交中。
+如果您将不相关的更改放入单独的提交，找到简洁的主题行会变得更容易。
+然而，经常有情况下 50 个字符限制太过严格，因此在必要时不要担心超出此限制。
 
-**Use imperative mood in the subject line**\
-A common instinct when writing commit messages it to describe what you did in the **past tense**, e.g. "Fixed bugs and improved code".
-Another one is to describe the **content** of the commit, e.g. "bug fixes and code improvements".
-Instead, write the subject line as if **giving a command or instruction**, e.g. "Fix bugs and improve code".
-A simple rule of thumb is that the subject should complete the sentence "If applied, this commit will...".
-The resulting history will be more natural to read.
-Note that this primarily applies to the subject, the style of the body can be more flexible.
+**在主题行中使用祈使语气**\
+编写提交消息时的一种常见直觉是用**过去时**描述您做了什么，例如 "Fixed bugs and improved code"。
+另一种是描述提交的**内容**，例如 "bug fixes and code improvements"。
+相反，应该把主题行写成**发出命令或指令**的样子，例如 "Fix bugs and improve code"。
+一个简单的经验法则是，主题应该能完成这个句子 "If applied, this commit will..."。
+这样产生的历史记录读起来会更自然。
+请注意，这主要适用于主题，正文的风格可以更灵活。
 
-**Put yourself in the shoes of the reader**\
-The target audience for your commit messages are future readers of the project history.
-They are trying to understand **what** your changes did and **why**.
-They can always read the content changes directly for **how** they did that, so the ideal commit message should complement that.
-Great candidates include information that's not present in the content itself as well as guidance to understand the changes more quickly.
+**设身处地为读者着想**\
+您的提交消息的目标受众是项目历史记录的未来读者。
+他们试图理解您的更改做了**什么**以及**为什么**。
+他们始终可以直接阅读内容更改来了解是**如何**做到的，因此理想的提交消息应该对此进行补充。
+好的内容包括内容本身不包含的信息，以及帮助更快理解更改的指导。
 ```
 
-Let's see the result of running `jj commit` with `jj log`:
+让我们用 `jj log` 看看运行 `jj commit` 的结果：
 
 <!-- generated by aha script -->
 <pre class="aha">
@@ -125,16 +125,16 @@ Let's see the result of running `jj commit` with `jj log`:
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">0000000</span>
 </pre>
 
-There are a few things to observe here:
-- The new commit is a child of our previous working copy commit.
-- The previous commit shows the subject line of the description we gave it.
-- The new commit became our working copy, meaning any further file changes will be recorded into the new commit.
-  This marker is not important and you can ignore it.
-- The previous commit has a different symbol (circle `○`) than the root commit (diamond `◆`).
-  This is related to an important feature, which we'll learn about later.
+这里有几个需要注意的地方：
+- 新提交是我们之前工作副本提交的子提交。
+- 之前的提交显示了我们为其添加的描述的主题行。
+- 新提交成为了我们的工作副本，这意味着任何进一步的文件更改都将记录到新提交中。
+  这个标记不重要，您可以忽略它。
+- 之前的提交使用了与根提交（菱形 `◆`）不同的符号（圆形 `○`）。
+  这与一个重要的功能有关，我们稍后会学习。
 
-We now have the tools for the most basic version control workflow:
-1. make some changes
-1. create a new commit
+我们现在拥有了最基本的版本控制工作流的工具：
+1. 做出一些更改
+1. 创建一个新提交
 
-Repeating these two steps is what you'll do the most, when working on a version-controlled project.
+重复这两个步骤是您在处理版本控制项目时最常做的事情。

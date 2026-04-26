@@ -1,7 +1,7 @@
-# Deleting commits and bookmarks
+# 删除提交和书签
 
-````admonish reset title="Reset your progress" collapsible=true
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置您的进度" collapsible=true
+要重置到本章开头的状态，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s abandon
@@ -9,9 +9,9 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-Remember the for-loop experiment Alice had put aside for a while?
-Jujutsu lets you keep as many of those experiments around as you like.
-Let's simulate a few with these commands:
+还记得 Alice 搁置了一段时间的 for 循环实验吗？
+Jujutsu 让您可以随意保留尽可能多的此类实验。
+让我们用以下命令模拟几个：
 
 ```sh
 jj commit -m "Experiment: Migrate to shiny new framework"
@@ -40,12 +40,12 @@ jj new main
 ~
 </pre>
 
-After a lengthy debate with Bob, Alice must admit that none of these experiments are good ideas.
-She decides to delete the commits and bookmarks.
+经过与 Bob 的长时间辩论后，Alice 必须承认这些实验都不是好主意。
+她决定删除这些提交和书签。
 
-The jj command to do that is `jj abandon <change-id>`.
-You can simply call this command three times with the change ID of each experimental commit.
-You can also copy-paste the following command, which deletes them all at once:
+执行此操作的 jj 命令是 `jj abandon <change-id>`。
+您可以简单地对每个实验性提交的变更ID调用此命令三次。
+您也可以复制粘贴以下命令，一次性删除它们：
 
 ```sh
 jj abandon 'description(substring:"Experiment")'
@@ -61,39 +61,39 @@ Deleted bookmarks: push-lqpnzsmzkxry, push-oqsqtxwowvuw, push-rppuwxxpnkqu
 <span class="bold "></span><span class="bold cyan ">Hint: </span>Deleted bookmarks can be pushed by name or all at once with `jj git push --deleted`.
 </pre>
 
-The output from `jj abandon` tells us that all three commits were deleted, including the bookmarks that were pointing to them.
-Jujutsu assumes that if you want to delete a commit, you probably don't need the bookmark pointing to it anymore either.
-If you actually want to keep it, move the bookmark to a commit you're planning to preserve before running `jj abandon`.
+`jj abandon` 的输出告诉我们所有三个提交已被删除，包括指向它们的书签。
+Jujutsu 假定如果您想删除一个提交，您可能也不再需要指向它的书签。
+如果您实际上想保留它，请在运行 `jj abandon` 之前将书签移动到一个您打算保留的提交上。
 
-That being said, the bookmarks are only deleted locally.
-Just like new or moved bookmarks, deleted ones have to be synchronized explicitly.
-This makes it easier to fix mistakes.
-If you accidentally delete a bookmark locally, you can `jj undo` that without issues.
-If you deleted it on the remote already, restoring it takes a bit more effort.
-Let's sync the deleted bookmarks with the remote:
+话虽如此，书签仅在本地被删除。
+就像新建或移动的书签一样，已删除的书签必须显式同步。
+这使得修复错误更容易。
+如果您不小心在本地删除了一个书签，您可以通过 `jj undo` 毫无问题地撤销它。
+如果您已经在远程删除了它，恢复它则需要更多的努力。
+让我们将已删除的书签同步到远程：
 
 ```sh
 jj git push --deleted
 ```
 
-````admonish note title="Duplicate commits when using Git directly" collapsible=true
-We've talked about how Jujutsu is compatible with Git.
-It creates a `.git` directory in your repo that looks like it was made and managed by Git itself.
-This lets other tools that interoperate with Git work seamlessly.
+````admonish note title="直接使用 Git 时的重复提交" collapsible=true
+我们讨论过 Jujutsu 如何与 Git 兼容。
+它在您的仓库中创建一个 `.git` 目录，看起来就像是由 Git 本身创建和管理的。
+这使得其他与 Git 互操作的工具可以无缝工作。
 
-As a rule of thumb, this interoperability work flawlessly if other tools **only read** the `.git` directory.
-However, there can be slight issues if they modify it as well.
-The fix is usually simple, but it helps to have an intuition of what can go wrong.
+作为经验法则，如果其他工具只是**读取** `.git` 目录，这种互操作性可以完美运行。
+然而，如果它们也修改它，可能会有一些小问题。
+修复通常很简单，但了解可能出现的问题会有所帮助。
 
-Let's make a simple example.
-The following commands add some file to Jujutsu's working copy commit.
-Afterwards, a new commit is created with Git itself.
-Running `jj log` shows a branched-off commit that seems out of place.
+让我们做一个简单的例子。
+以下命令向 Jujutsu 的工作副本提交添加一些文件。
+之后，使用 Git 本身创建一个新的提交。
+运行 `jj log` 会显示一个似乎不协调的分叉提交。
 
 ```sh
 touch some_file
-jj status # record new file into working copy
-git commit -am "add some file" # create commit with git, bypassing jj
+jj status # 将新文件记录到工作副本中
+git commit -am "add some file" # 用 git 创建提交，绕过 jj
 jj log
 ```
 
@@ -110,53 +110,53 @@ jj log
 ~
 </pre>
 
-This branched-off commit is actually the previous working copy commit of Jujutsu.
-Jujutsu doesn't know that the commit created with Git is basically the same.
-(If you `jj show` both commits, you'll see that they contain the same file changes.)
+这个分叉的提交实际上是 Jujutsu 之前的工作副本提交。
+Jujutsu 不知道用 Git 创建的提交基本上是相同的。
+（如果您对两个提交执行 `jj show`，您会看到它们包含相同的文件更改。）
 
-The solution here is simply to `jj abandon` the dangling commit, since it's a duplicate.
-Probably 99% of problems caused by different tools modifying the Git database are just like this.
-The next time you run Jujutsu, it will find new commits it doesn't know what to do with, so it keeps all of them.
-You then have to delete the ones you don't need.
+这里的解决方案很简单，就是 `jj abandon` 那个悬挂的提交，因为它是一个重复项。
+可能 99% 由不同工具修改 Git 数据库引起的问题都是像这样的。
+下次您运行 Jujutsu 时，它会发现它不知道如何处理的新提交，因此它会保留所有提交。
+然后您必须删除不需要的提交。
 
-Let's clean up this whole tangent:
+让我们清理这整个题外话：
 
 ```sh
-jj abandon main+ # abandon direct children of main
+jj abandon main+ # 放弃 main 的直接子提交
 ```
 ````
 
-## Immutability
+## 不可变性
 
-This is a good place to talk about mutable and immutable commits.
-`jj abandon` is a command that modifies the commit history.
-A commit represents something that happened.
-By deleting a commit, you're basically saying "Nu-uh, that didn't happen."
-Learning about `jj rebase` was the first time we rewrote history, remember?
-Or did you `jj abandon` that memory, hihi?
+这是讨论可变和不可变提交的好地方。
+`jj abandon` 是一个修改提交历史的命令。
+一个提交代表已经发生的事情。
+通过删除一个提交，您基本上是在说"不对，那没发生过。"
+学习 `jj rebase` 是我们第一次重写历史，还记得吗？
+还是您已经 `jj abandon` 了那段记忆，嘻嘻？
 
-Rewriting history is often a perfectly normal and logical thing to do.
-But it can be dangerous!
-For example, imagine what would happen if Alice rewrote commits on the `main` branch.
-That would be very confusing for Bob!
-It would be equally confusing for Bob if Alice rewrote commits pointed to by Bob's bookmarks.
-There are various complicated problems Alice and Bob can run into like this.
+重写历史通常是一件完全正常且合乎逻辑的事情。
+但它可能很危险！
+例如，想象一下如果 Alice 重写了 `main` 分支上的提交会发生什么。
+那会让 Bob 非常困惑！
+如果 Alice 重写了 Bob 的书签指向的提交，那同样会让 Bob 困惑。
+Alice 和 Bob 可能会遇到各种类似的复杂问题。
 
-To avoid these problems, people who collaborate using version control systems usually follow a simple rule of thumb:
+为了避免这些问题，使用版本控制系统协作的人通常遵循一个简单的经验法则：
 
-**Never rewrite history on shared branches.**
+**永远不要在共享分支上重写历史。**
 
-Usually that's just the `main` branch, but there can be more, depending on the project.
+通常只有 `main` 分支，但根据项目的不同，可能会有更多。
 
-On personal branches, things are usually more relaxed.
-Alice should expect Bob to rewrite history freely on his own branches.
-In return, she gets to rewrite history on hers. 
-If you need to rely on the history of someone else's branch to remain stable, you should probably talk to them about that.
+在个人分支上，事情通常更宽松。
+Alice 应该预期 Bob 会在自己的分支上自由地重写历史。
+作为回报，她也可以在自己的分支上重写历史。
+如果您需要依赖别人分支的历史保持稳定，您可能应该和他们沟通一下。
 
-Now for the great news:
-**Jujutsu enforces these rules by default!**
-That way, you don't have to worry about them most of the time.
-Try deleting the latest commit on the `main` branch:
+现在来说好消息：
+**Jujutsu 默认强制实施这些规则！**
+这样，您大部分时候都不必担心它们。
+尝试删除 `main` 分支上的最新提交：
 
 ```sh
 jj abandon main
@@ -173,8 +173,8 @@ jj abandon main
 <span class="bold "></span><span class="bold cyan ">Hint: </span>This operation would rewrite 1 immutable commits.
 </pre>
 
-So we are protected from accidentally deleting stuff on the `main` branch.
-Protected commits are called **immutable** and Jujutsu represents them in the log graph with a **diamond** (**`◆`**) symbol.
-Unprotected commits are called **mutable** and represented with a **circle** (**`○`**).
-These protections don't just apply to `jj abandon` and `jj rebase`, but to all commands that edit existing history.
-We'll learn about a lot of commands like that in the next level.
+所以我们受到了保护，不会意外删除 `main` 分支上的内容。
+受保护的提交被称为**不可变**的，Jujutsu 在日志图中用**菱形**（**`◆`**）符号表示它们。
+未受保护的提交被称为**可变**的，用**圆形**（**`○`**）表示。
+这些保护不仅适用于 `jj abandon` 和 `jj rebase`，还适用于所有编辑现有历史的命令。
+我们将在下一等级中学习很多这样的命令。

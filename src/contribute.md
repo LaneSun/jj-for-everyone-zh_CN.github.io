@@ -1,13 +1,13 @@
-# Help make this tutorial better
+# 帮助改进本教程
 
-If you find a typo, you can suggest a fix directly by clicking on the "edit" icon in the top-right corner.
-If you have general suggestions for improvement, please [open an issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new).
-I am also very interested in experience reports, for example:
-- Do you have any frustrations with Jujutsu which the tutorial did not help you overcome?
-- Was there a section that wasn't explained clearly?
-  (If you didn't understand something, it's probably the tutorial's fault, not yours!)
-- Did you complete a level but didn't feel like you had the skills that were promised in the level overview?
-- Is there something missing that's not being taught but should?
-- Do you feel like the content could be structured better?
+如果你发现了拼写错误，你可以直接点击右上角的"编辑"图标提出修复建议。
+如果你有一般性的改进建议，请[提交 issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new)。
+我也非常感兴趣收到使用体验报告，例如：
+- 你对 Jujutsu 有什么本教程未能帮助你解决的困扰吗？
+- 有没有某一部分解释得不够清楚？
+  （如果你有不明白的地方，那很可能是教程的问题，而不是你的问题！）
+- 你是否完成了某个级别，却觉得没有掌握该级别概览中所承诺的技能？
+- 有没有什么应该教但还没教的缺失内容？
+- 你觉得内容结构可以安排得更好吗？
 
-Thank you for helping me improve this tutorial!
+感谢你帮助我改进本教程！

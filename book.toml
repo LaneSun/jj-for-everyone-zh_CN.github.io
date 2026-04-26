@@ -1,9 +1,9 @@
 [book]
-authors = ["Remo Senekowitsch"]
-language = "en"
+authors = ["Remo Senekowitsch", "LaneSun"]
+language = "zh"
 src = "src"
-title = "Jujutsu for everyone"
-description = "A Jujutsu tutorial that requires no previous experience with Git or other version control systems."
+title = "Jujutsu for everyone（中文版）"
+description = "Jujutsu 教程中文翻译版，无需任何 Git 或其他版本控制系统经验。"
 
 [output.html]
 default-theme = "latte"
@@ -16,8 +16,8 @@ additional-css = [
   "theme/aha_styles.css",
   "theme/mdbook-admonish-custom.css",
 ]
-git-repository-url = "https://github.com/jj-for-everyone/jj-for-everyone.github.io"
-edit-url-template = "https://github.com/jj-for-everyone/jj-for-everyone.github.io/edit/main/{path}"
+git-repository-url = "https://github.com/LaneSun/jj-for-everyone-zh_CN.github.io"
+edit-url-template = "https://github.com/LaneSun/jj-for-everyone-zh_CN.github.io/edit/main/{path}"
 no-section-label = true
 
 [preprocessor.admonish]

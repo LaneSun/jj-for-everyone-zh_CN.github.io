@@ -1,80 +1,80 @@
-# Introduction
+# 简介
 
-This is a tutorial for the [Jujutsu](https://github.com/jj-vcs/jj) version control system.
-It requires **no previous experience with Git** or any other version control system.
+这是 [Jujutsu](https://github.com/jj-vcs/jj) 版本控制系统的教程。
+它**不要求任何 Git 或其他版本控制系统的使用经验**。
 
-At the time of writing, most Jujutsu tutorials are targeted at experienced Git users, teaching them how to transfer their existing Git skills over to Jujutsu.
-This tutorial is my attempt to fill the void of beginner learning material for Jujutsu.
-If you are already experienced with Git, I recommend [Steve Klabnik's tutorial](https://steveklabnik.github.io/jujutsu-tutorial) instead of this one.
+在撰写本文时，大多数 Jujutsu 教程面向的是有经验的 Git 用户，教他们如何将现有的 Git 技能迁移到 Jujutsu。
+本教程是我填补 Jujutsu 初学者学习材料空白的尝试。
+如果你已经有 Git 使用经验，我推荐阅读 [Steve Klabnik 的教程](https://steveklabnik.github.io/jujutsu-tutorial)而不是本教程。
 
-This tutorial requires you to work in the terminal.
-Don't worry, there's a chapter covering some terminal basics in case you're not 100% comfortable with that yet.
-The commands I tell you to run will often only work on Unix-like operating systems like Linux and Mac.
-If you're stuck on Windows, consider using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).
+本教程要求你在终端中操作。
+别担心，有一个章节涵盖了终端基础知识，以防你对此还不太熟悉。
+我让你运行的命令通常只能在类 Unix 操作系统上运行，比如 Linux 和 Mac。
+如果你使用的是 Windows，考虑使用 [WSL](https://learn.microsoft.com/en-us/windows/wsl/install)。
 
-## What is version control and why should you use it?
+## 什么是版本控制，为什么要使用它？
 
-I will assume you're planning to use version control for software development, but it can be used for other things as well.
-For example, authoring professionally formatted documents with tools like [Typst](https://typst.app/).
-The source of this tutorial is stored in version control too!
+我将假设你打算将版本控制用于软件开发，但它也可以用于其他方面。
+例如，使用 [Typst](https://typst.app/) 等工具编写专业格式的文档。
+本教程的源代码也存储在版本控制中！
 
-What these scenarios have in common is that a large body of work (mostly in the form of text) is slowly being expanded and improved over time.
-You don't want to lose any of it and you may want to compare or be able to go back to previous states of your work.
-Often, several people need to work on the project at the same time.
+这些场景的共同点是，大量的工作成果（主要以文本形式）会随着时间的推移逐渐扩展和改进。
+你不想丢失任何内容，并且你可能想要比较或回到之前的工作状态。
+通常，多个人需要同时在一个项目上工作。
 
-A general-purpose backup solution can keep a few copies of your files around.
-A graphical document editor can allow multiple people to edit the text simultaneously.
-But sometimes, you need a sharper knife.
-Jujutsu is the sharpest knife available.
+通用的备份方案可以为你保留文件的几个副本。
+图形化文档编辑器可以允许多人同时编辑文本。
+但有时候，你需要一把更锋利的刀。
+Jujutsu 就是目前最锋利的刀。
 
-## Why Jujutsu instead of Git?
+## 为什么选择 Jujutsu 而不是 Git？
 
-Git is by far the most commonly used VCS in the software development industry.
-So why not use that?
-Using the most popular thing has undeniable benefits.
-There is lots of learning material, lots of people can help you with problems, lots of other tools integrate with it etc.
-Why make life harder on yourself by using a lesser-known alternative?
+Git 是迄今为止软件开发行业中最常用的版本控制系统。
+那为什么不使用它呢？
+使用最流行的工具确实有不可否认的好处。
+有大量的学习资料，有很多人可以帮你解决问题，有很多其他工具与之集成等等。
+为什么要给自己找麻烦，使用一个不太知名的替代品呢？
 
-Here's my elevator pitch:
-- **Jujutsu is compatible with Git.**
-  You're not actually losing _anything_ by using Jujutsu.
-  You can work with it on any existing project that uses Git for version control without issues.
-  Tools that integrate with Git mostly work just as well with Jujutsu.
+以下是我的电梯演讲：
+- **Jujutsu 与 Git 兼容。**
+  使用 Jujutsu 你实际上不会_失去_任何东西。
+  你可以在任何使用 Git 进行版本控制的现有项目上无缝工作。
+  与 Git 集成的工具在 Jujutsu 中也大多能正常工作。
 
-- **Jujutsu is easier to learn than Git.**
-  (That is, assuming I did a decent job writing this tutorial.)
-  Git is known for its complicated, unintuitive user experience.
-  Jujutsu gives you all the functionality of Git with a lot less complexity.
-  Experienced users of Git usually don't care about this, because they've paid the price of learning Git already.
-  (I was one of these people once.)
-  But you care!
+- **Jujutsu 比 Git 更容易学习。**
+  （当然，这得假设我写得还不错。）
+  Git 以其复杂、反直觉的用户体验而闻名。
+  Jujutsu 为你提供了 Git 的所有功能，但复杂度却大大降低。
+  有经验的 Git 用户通常不在意这一点，因为他们已经付出了学习 Git 的代价。
+  （我曾经也是其中一员。）
+  但你在意！
 
-- **Jujutsu is more powerful than Git.**
-  Despite the fact that it's easier to learn and more intuitive, it actually has loads of awesome capabilities for power users that completely leave Git in the dust.
-  Don't worry, you don't have to use that power right away.
-  But you can be confident that if your VCS-workflow becomes more demanding in the future, Jujutsu will have your back.
-  This is not a watered-down "we have Git at home" for slow learners!
+- **Jujutsu 比 Git 更强大。**
+  尽管它更容易学习、更直观，但它实际上为高级用户提供了大量强大的功能，让 Git 望尘莫及。
+  别担心，你不必立刻使用这些高级功能。
+  但你可以放心，如果将来你的版本控制工作流变得更复杂，Jujutsu 会支持你。
+  这可不是给慢速学习者准备的阉割版"Git 山寨货"！
 
-Learning Jujutsu instead of Git as your first VCS does have some downsides:
+学习 Jujutsu 而不是 Git 作为你的第一个版本控制系统确实有一些缺点：
 
-- When talking about version control with peers, they will likely use Git-centric vocabulary.
-  Jujutsu shares a lot of Git's concepts, but there are also differences.
-  Translating between the two in conversation can add some mental overhead.
-  (solution: convince your peers to use Jujutsu 😉)
+- 当与同事讨论版本控制时，他们可能会使用以 Git 为中心的词汇。
+  Jujutsu 与 Git 共享许多概念，但也存在差异。
+  在对话中二者之间的转换可能会增加一些思维负担。
+  （解决方案：说服你的同事也使用 Jujutsu 😉）
 
-- Jujutsu is relatively new and doesn't cover 100% of the features of Git yet.
-  When you do run into the rare problem where Jujutsu doesn't have an answer, you can always fall back to use Git directly, which works quite seamlessly.
-  Still, having to use two tools instead of one is slightly annoying.
-  I plan to teach such Git features in this tutorial in later levels.
-  The tutorial should be a one-stop-shop for all Jujutsu users.
+- Jujutsu 相对较新，尚未覆盖 Git 100% 的功能。
+  当你遇到 Jujutsu 无法解决的罕见问题时，你总是可以退回到直接使用 Git，这可以非常无缝地进行。
+  不过，不得不使用两个工具而不是一个，确实有点烦人。
+  我计划在本教程的后续级别中教授这些 Git 功能。
+  本教程应该成为所有 Jujutsu 用户的一站式资源。
 
-- The command line interface of Jujutsu is not yet stable.
-  That means in future versions of Jujutsu, some commands might work a little differently or be renamed.
-  I personally don't think this should scare you away.
-  Many people including me have used Jujutsu as a daily driver for a long time.
-  Whenever something _did_ change, my reaction was usually:
-  "Great, that was one of the less-than-perfect parts of Jujutsu! Now it's even more intuitive than before!"
-  Consider [subscribing to GitHub releases of this tutorial](watch_releases.md).
-  You will be notified if new versions of Jujutsu change something in a way that's relevant to what you learned in this tutorial.
+- Jujutsu 的命令行界面尚未稳定。
+  这意味着在未来的 Jujutsu 版本中，某些命令可能会有细微变化或更名。
+  我个人认为这不应该吓跑你。
+  包括我在内的许多人已经长期将 Jujutsu 作为日常使用工具。
+  每当确实发生了什么变化时，我的反应通常是：
+  "太好了，这又解决了 Jujutsu 的一个不足之处！现在它比以前更直观了！"
+  考虑[订阅本教程的 GitHub releases](watch_releases.md)。
+  如果新版本的 Jujutsu 中的某些变化与本教程中你学到的内容相关，你会收到通知。
 
-Despite some downsides, I think the benefits are **well worth it**.
+尽管有一些缺点，我认为其好处是**非常值得的**。

@@ -1,58 +1,58 @@
-# How to read this tutorial
+# 如何阅读本教程
 
-Here's some information about how the tutorial is structured.
-Read carefully for the best experience.
+以下是一些关于教程结构的信息。
+请仔细阅读以获得最佳体验。
 
-## Level up!
+## 升级吧！
 
-The tutorial is split into **levels**, which define the hierarchy in the sidebar.
-When you complete a level, you should probably put this tutorial away for a while and practice what you've learned.
-Once you're comfortable with those skills, come back for the next level.
+本教程分为多个**级别**，它们在侧边栏中定义了层级结构。
+当你完成一个级别后，最好把本教程放下一段时间，练习你所学到的内容。
+一旦你对这些技能感到得心应手，再回来学习下一个级别。
 
-There is one exception to this:
-If you're here because you need to collaborate with other people, you should complete the levels 1 and 2 right away.
+有一个例外：
+如果你是因为需要与他人协作而来到这里，你应该立即完成第 1 级和第 2 级。
 
-Here's an overview of the available levels:
+以下是可用级别的概览：
 
-| Level | Description |
+| 级别 | 描述 |
 | :-: | --- |
-| **1** | The bare minimum to get started. Enough for solo-projects like submitting homework as a student. |
-| **2** | The bare minimum for collaboration, e.g. students doing a group project or software engineers working in a team. |
-| **3** | Important problem-solving skills: undoing mistakes, resolving merge conflicts, restoring files from history. |
+| **1** | 入门所需的最低限度。足够用于个人项目，例如学生提交作业。 |
+| **2** | 协作所需的最低限度，例如学生做小组项目或软件工程师在团队中工作。 |
+| **3** | 重要的问题解决技能：撤销错误、解决合并冲突、从历史中恢复文件。 |
 
-More levels are planned.
-The following chapter explains how to get notified about new content.
+更多级别正在计划中。
+下一章将说明如何获取新内容的通知。
 
-## Reset your progress at any time
+## 随时重置你的进度
 
-Throughout the tutorial, you will build an example repository.
-Later chapters depend on the state of previous ones.
-But don't be afraid to mess up or lose your progress by experimenting!
+在整个教程中，你将构建一个示例仓库。
+后续章节依赖于之前章节的状态。
+但不必担心因尝试而搞砸或丢失进度！
 
-There is a script which automates the task of resetting your progress to the **start of any chapter**.
+有一个脚本可以自动完成将你的进度重置到**任何章节开头**的任务。
 
-To identify the chapter you want to continue with, the script expects a keyword as an argument.
-Each chapter includes its precise reset command at the top, so you can easily copy-paste it.
-For example, the text box below contains instructions to reset your progress to the very beginning of the tutorial:
+为了识别你想要继续的章节，该脚本需要一个关键词作为参数。
+每个章节在顶部都包含其精确的重置命令，因此你可以轻松复制粘贴。
+例如，下面的文本框包含将你的进度重置到教程最初起点的指令：
 
-````admonish reset title="Reset your progress"
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置你的进度"
+要将你的进度重置到本章开头，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s install
 ```
 ````
 
-This method downloads the script from the internet and executes it right away.
-If you have security concerns about that, you can instead:
-1. Download the script [here](./reset.sh).
-1. Read the source to make sure it's safe.
-   It's not doing anything complicated, it just executes the commands of the tutorial in sequence.
-1. Run the downloaded script (with the chapter-keyword as the first argument).
+此方法从互联网下载脚本并立即执行。
+如果你对此有安全方面的顾虑，你可以改为：
+1. 从[此处](./reset.sh)下载脚本。
+1. 阅读源代码以确保它是安全的。
+   它没有做任何复杂的事情，只是按顺序执行本教程中的命令。
+1. 运行下载的脚本（以章节关键词作为第一个参数）。
 
-For convenience, the source of the script is also included in the expandable text box below.
+为方便起见，脚本的源代码也包含在下面可展开的文本框中。
 
-`````admonish note title="Source of reset script" collapsible=true
+`````admonish note title="重置脚本的源代码" collapsible=true
 ````sh
 {{ #include reset.sh }}
 ````

@@ -1,25 +1,25 @@
-# Stay up to date
+# 保持更新
 
-Both this tutorial and Jujutsu are still evolving.
-In order to keep your Jujutsu knowledge up-to-date, **subscribe to releases of the tutorial's GitHub repo**.
-You'll get an email from GitHub whenever I post a release, which basically allows me to send you notifications.
+本教程和 Jujutsu 都仍在不断发展中。
+为了保持你的 Jujutsu 知识是最新的，**请订阅本教程 GitHub 仓库的 releases**。
+每当我发布一个 release 时，你会收到一封来自 GitHub 的邮件，这基本上允许我向你发送通知。
 
-I'm planning to post releases for two reasons in particular:
+我计划主要在以下两种情况下发布 release：
 
-1. I finished writing a new level.
-1. A new version of Jujutsu includes changes that are relevant to readers of this tutorial.
+1. 我写完了一个新的级别。
+1. 新版本的 Jujutsu 中包含了对本教程读者有影响的更改。
 
-To subscribe: Visit the [GitHub repo](https://github.com/jj-for-everyone/jj-for-everyone.github.io), click on "Watch", then "Custom" and lastly select "Releases".
+订阅方法：访问 [GitHub 仓库](https://github.com/jj-for-everyone/jj-for-everyone.github.io)，点击 "Watch"，然后点击 "Custom"，最后选择 "Releases"。
 
-![screenshot of how to subscribe to release announcements](./watch_releases.png)
+![订阅 release 公告的截图](./watch_releases.png)
 
-The following levels are planned for the future:
+未来计划推出以下级别：
 
-| Level | Description |
+| 级别 | 描述 |
 | :-: | --- |
-| **4** | History rewriting skills. These will allow you to iterate toward a polished version history, which pays dividends long-term. Some projects require you to have these skills in order to meet their quality standards. |
-| **5** | Productivity boosters, advanced workflows, lesser-known CLI functions and a little VCS theory. Completing this level means you have mastered Jujutsu. |
-| **6** | Additional topics that only come up in specific situations: tags, submodules, workspaces etc. Consider skimming the list of topics and come back once you have an actual need for it. |
+| **4** | 历史改写技能。这些技能将使你能够逐步打磨出一个精致的版本历史，从长远来看会带来丰厚回报。有些项目要求你具备这些技能才能达到其质量标准。 |
+| **5** | 生产力提升技巧、高级工作流、较少为人知的命令行功能以及一些版本控制理论。完成此级别意味着你已经精通 Jujutsu 了。 |
+| **6** | 仅在特定情况下才会遇到的额外主题：标签、子模块、工作区等。建议你浏览一下主题列表，等你有实际需求时再回来学习。 |
 
-I consider the tutorial up-to-date with Jujutsu **version 0.40**, which was released in **April 2026**.
-If that's more than a couple months in the past, I probably stopped updating this tutorial.
+我认为本教程已更新至 Jujutsu **0.40 版本**，该版本发布于 **2026 年 4 月**。
+如果那已经是几个月前的事了，我可能已经停止更新本教程了。

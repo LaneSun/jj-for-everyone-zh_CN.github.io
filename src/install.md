@@ -1,7 +1,7 @@
-# Installation and setup
+# 安装与设置
 
-There are many ways to install Jujutsu and the best one depends on your system.
-If you don't care at all about how Jujutsu is installed, you can copy-paste these commands:
+安装 Jujutsu 的方式有很多，最佳方式取决于您的系统。
+如果您完全不在意 Jujutsu 的安装方式，可以复制粘贴以下命令：
 
 ```sh
 curl https://mise.run | sh
@@ -11,102 +11,102 @@ rm -rf /tmp/jj-install
 exec $SHELL --login
 ```
 
-Now run `jj --version` to verify the installation.
-It should print the currently installed version of Jujutsu, something like `jj 0.36.0-blabla`.
-If the output is an error instead, e.g. `bash: jj: command not found...`, open the text box below.
+现在运行 `jj --version` 来验证安装。
+它应该打印出当前安装的 Jujutsu 版本，类似于 `jj 0.36.0-blabla`。
+如果输出是错误，例如 `bash: jj: command not found...`，请打开下面的文本框。
 
 ````admonish fail title="jj: command not found..." collapsible=true
-Your system probably doesn't add the installation directory `~/.local/bin` to the `PATH` environment variable.
-To fix that, you first need to figure out what shell you're using:
+您的系统可能没有将安装目录 `~/.local/bin` 添加到 `PATH` 环境变量中。
+要解决这个问题，您首先需要弄清楚您使用的是哪种 shell：
 
 ```sh
 echo $SHELL
 ```
 
-The output should end with either "bash", or "zsh".
-That's your shell.
-Next, put a command adding `~/.local/bin` to your `PATH` variable into your shell's startup script:
+输出应该以 "bash" 或 "zsh" 结尾。
+这就是您的 shell。
+接下来，将一条将 `~/.local/bin` 添加到 `PATH` 变量的命令放入您的 shell 启动脚本中：
 
 ```sh
-# for bash:
+# 对于 bash：
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
 ```
 
 ```sh
-# for zsh:
+# 对于 zsh：
 echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.zshrc
 ```
 
-Lastly, close the terminal and open a new one so the changes take effect.
+最后，关闭终端并打开一个新的，以使更改生效。
 ````
 
-```admonish note title="Explanation of installation commands" collapsible=true
-Installing software is more difficult than one might think.
-It depends on many factors like CPU architecture and operating system.
-That's why there's not a single, easy command we can run to install Jujutsu on any system.
-Instead, we first install another program that specializes in installing software called `mise`.
-(You can read more about mise on [its website](https://mise.jdx.dev/).)
-The first command `curl https://mise.run | sh` downloads and runs a script from the internet that installs `mise` for you.
-This is kind of dangerous and you should be careful when executing scripts from the internet.
-People could place malicious commands in the script you're downloading.
-But it's a convenient technique if you trust the owner of the website you're loading the script from.
+```admonish note title="安装命令说明" collapsible=true
+安装软件比人们想象的要困难。
+它取决于许多因素，如 CPU 架构和操作系统。
+这就是为什么没有一个单一的、简单的命令可以在任何系统上安装 Jujutsu。
+相反，我们首先安装另一个专门用于安装软件的程序，叫做 `mise`。
+（您可以在[其网站](https://mise.jdx.dev/)上了解更多关于 mise 的信息。）
+第一个命令 `curl https://mise.run | sh` 从互联网下载并运行一个脚本来为您安装 `mise`。
+这有点危险，您在从互联网执行脚本时应当小心。
+人们可能会在您下载的脚本中放置恶意命令。
+但如果您信任提供脚本的网站所有者，这是一种方便的技术。
 
-The second command runs `mise` to download Jujutsu into a temporary directory.
-We have to specify the full path to the `mise` binary (`~/.local/bin/mise`), because at this point we don't know if `~/.local/bin` is included in your `PATH` variable.
-(See the ["Terminal basics" chapter](./terminal_basics.md#the-path-variable) for an explanation of that.)
-`mise` takes care of downloading the right binary for your operating system and CPU architecture.
+第二个命令运行 `mise` 将 Jujutsu 下载到一个临时目录。
+我们必须指定 `mise` 二进制文件的完整路径（`~/.local/bin/mise`），因为此时我们不知道 `~/.local/bin` 是否包含在您的 `PATH` 变量中。
+（相关说明请参见["终端基础"章节](./terminal_basics.md#the-path-variable)。）
+`mise` 负责下载适合您操作系统和 CPU 架构的正确二进制文件。
 
-The following command moves the downloaded binary to `~/.local/bin`, which is the customary place for user-local programs.
-`rm -rf /tmp/jj-install` ("remove recursive force") deletes the temporary download directory and its content.
+接下来的命令将下载的二进制文件移动到 `~/.local/bin`，这是存放用户本地程序的惯用位置。
+`rm -rf /tmp/jj-install`（"remove recursive force"）删除临时下载目录及其内容。
 
-Lastly, `exec $SHELL --login` restarts your shell, which causes its startup scripts to run again.
-Some Linux distributions like Ubuntu only add `~/.local/bin` to the `PATH` variable if that directory exists when the shell is started.
-So, restarting the shell after installing Jujutsu is a simple way to make sure the system will find the new program.
+最后，`exec $SHELL --login` 重新启动您的 shell，这会使其启动脚本再次运行。
+一些 Linux 发行版（如 Ubuntu）仅在 shell 启动时该目录存在的情况下才会将 `~/.local/bin` 添加到 `PATH` 变量中。
+因此，在安装 Jujutsu 后重新启动 shell 是确保系统能够找到新程序的一种简单方法。
 
-Maybe there are distributions which don't add `~/.local/bin` to `PATH` **at all**, which would mean those commands don't work on such a system.
-I'm not aware of such distributions.
-(Please [open an issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new) if you know of a relevant one!)
-You can fix such an issue for yourself by extending the `PATH` variable in your [shell startup script](http://localhost:3210/terminal_basics.html#startup-scripts).
+也许有些发行版**根本不**将 `~/.local/bin` 添加到 `PATH` 中，这意味着这些命令在此类系统上不起作用。
+我没有听说过这样的发行版。
+（如果您知道相关的发行版，请[提交 issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new)！）
+您可以通过在 [shell 启动脚本](http://localhost:3210/terminal_basics.html#startup-scripts) 中扩展 `PATH` 变量来为自己解决此类问题。
 ```
 
-````admonish info title="Other installation methods" collapsible=true
-The official installation instructions for several different platforms are [here](https://docs.jj-vcs.dev/latest/install-and-setup/).
-I will mention a few methods that I consider important as well.
+````admonish info title="其他安装方法" collapsible=true
+官方针对多种不同平台的安装说明在[这里](https://docs.jj-vcs.dev/latest/install-and-setup/)。
+我也会提到一些我认为重要的方法。
 
-If you use [cargo-binstall](https://github.com/cargo-bins/cargo-binstall), this works great:
+如果您使用 [cargo-binstall](https://github.com/cargo-bins/cargo-binstall)，这个方法非常好用：
 
 ```sh
 cargo-binstall jj-cli
 ```
 
-If you're a Mac & Homebrew user, this one's for you:
+如果您是 Mac 和 Homebrew 用户，这个方法适合您：
 
 ```sh
 brew install jj
 ```
 
-If you have the Rust toolchain installed and would like to compile from source, you can run:
+如果您已安装了 Rust 工具链，并希望从源代码编译，可以运行：
 
 ```sh
 cargo install --locked --bin jj jj-cli
 ```
 
-You can also download a binary directly from Jujutsu's [release page](https://github.com/jj-vcs/jj/releases/latest).
-Scroll down to "Assets", there is a list of archives to download.
-The right one depends on two things: your operating system and your CPU architecture.
-Look for the strings matching your system in the names of the archives.
+您也可以直接从 Jujutsu 的[发布页面](https://github.com/jj-vcs/jj/releases/latest)下载二进制文件。
+向下滚动到 "Assets"，那里有一个可供下载的压缩包列表。
+选择正确的压缩包取决于两点：您的操作系统和您的 CPU 架构。
+在压缩包名称中查找与您系统匹配的字符串。
 
-How to identify your operating system:
+如何识别您的操作系统：
 
-| operating system | string to look for |
+| 操作系统 | 要查找的字符串 |
 | --- | --- |
 | Linux | unknown-linux-musl |
 | Mac | apple-darwin |
 | Windows | pc-windows-msvc |
 
-How to identify your CPU architecture:
+如何识别您的 CPU 架构：
 
-| CPU brand | string to look for |
+| CPU 品牌 | 要查找的字符串 |
 | --- | --- |
 | Intel | x86_64 |
 | AMD | x86_64 |
@@ -114,58 +114,58 @@ How to identify your CPU architecture:
 | ARM | aarch64 |
 | Qualcom (Snapdragon) | aarch64 |
 
-Once you have downloaded the right archive, you need to extract it.
-You should be able to right-click on the downloaded archive in your file explorer and select "extract" or something similar in the drop-down.
-The extracted folder will contain documentation and a file called "jj".
-You need to move that into the directory `~/.local/bin/`.
-(Or another location where you keep your programs if you know what you're doing.)
+下载正确的压缩包后，您需要解压它。
+您应该可以在文件资源管理器中右键单击下载的压缩包，然后在下拉菜单中选择"解压"或类似选项。
+解压后的文件夹将包含文档和一个名为 "jj" 的文件。
+您需要将其移动到 `~/.local/bin/` 目录。
+（或者如果您知道自己在做什么，可以放到其他存放程序的位置。）
 ````
 
 ## Git
 
-You also need to have Git installed.
-MacOS and most Linux dirstros come with Git preinstalled.
-If you don't have it yet, install it using your package manager, e.g. `sudo apt install git`.
+您还需要安装 Git。
+MacOS 和大多数 Linux 发行版都预装了 Git。
+如果您还没有安装，请使用您的包管理器安装，例如 `sudo apt install git`。
 
-## Initial configuration
+## 初始配置
 
-Jujutsu is very configurable, but we don't care about most knobs and dials right now.
-The only thing that you **must** configure is your name and email.
-This is required metadata and some things won't work right without this information.
-However, you don't have to enter your _real_ name and email, in case you're not comfortable storing that information in the repositories you're planning to work on.
+Jujutsu 的可配置性非常高，但我们目前不关心大多数配置项。
+您**必须**配置的唯一信息是您的姓名和电子邮件。
+这是必要的元数据，没有这些信息，某些功能将无法正常工作。
+不过，如果您不想将这些信息存储在您计划工作的仓库中，您不必输入_真实_姓名和电子邮件。
 
-If you're working on school or work projects, it's probably fine to configure your real name and school / work email.
-These repositories are usually not publicly accessible.
+如果您正在进行学校或工作项目，配置您的真实姓名和学校/工作电子邮件通常是没问题的。
+这些仓库通常不公开可访问。
 
-If you're planning to work on open source projects that anyone can see, you may want to be more careful.
-You could use your GitHub handle as username, but many are comfortable using their real name too.
-The email address is more important.
-If you use your normal, private email address, there is a risk of receiving undesirable emails at that address.
-You might consider using a dedicated address just for open source work.
-Another alternative is to use an address provided by GitHub.
-It identifies your GitHub account, but you cannot receive emails through it.
-Go to [GitHub's email settings](https://github.com/settings/emails) and select "Keep my email address private", your private email address will then be shown at the top.
+如果您计划参与任何人都可以查看的开源项目，您可能需要更加谨慎。
+您可以使用 GitHub 用户名作为用户名，但许多人也不介意使用真实姓名。
+电子邮件地址更为重要。
+如果您使用普通的私人电子邮件地址，可能会有在该地址收到不受欢迎的邮件的风险。
+您可以考虑使用一个专门用于开源工作的地址。
+另一个替代方案是使用 GitHub 提供的地址。
+它标识您的 GitHub 账户，但您无法通过它接收电子邮件。
+前往 [GitHub 的电子邮件设置](https://github.com/settings/emails) 并选择 "Keep my email address private"，您的私人电子邮件地址将会显示在顶部。
 
-Here are the commands to configure your username and email:
+以下是配置用户名和电子邮件的命令：
 
 ```sh
 jj config set --user user.name "Anonymous"
 jj config set --user user.email "anon@local"
 ```
 
-If you want shell completions, follow the instructions [here](https://docs.jj-vcs.dev/latest/install-and-setup/#command-line-completion).
-If you don't know what a "shell completion" is, don't worry, it's not important.
+如果您想要 shell 补全功能，请按照[此处的说明](https://docs.jj-vcs.dev/latest/install-and-setup/#command-line-completion)操作。
+如果您不知道"shell 补全"是什么，不用担心，这不重要。
 
-## Installing a simple text editor
+## 安装一个简单的文本编辑器
 
-Jujutsu will sometimes ask you to edit a text file.
-The default text editor used for that purpose is `nano` on Linux and Mac.
-It works fine, but it can be counter-intuitive for new users.
-(<kbd>Ctrl+O</kbd> is saving the file and <kbd>Ctrl+X</kbd> is closing the program.)
+Jujutsu 有时会要求您编辑文本文件。
+用于此目的的默认文本编辑器在 Linux 和 Mac 上是 `nano`。
+它运行良好，但对于新用户来说可能不太直观。
+（<kbd>Ctrl+O</kbd> 保存文件，<kbd>Ctrl+X</kbd> 关闭程序。）
 
-This is optional, but I recommend you install a text editor called [edit](https://github.com/microsoft/edit).
-I consider it to be the simplest and most intuitive alternative.
-If you installed Jujutsu with `mise` (as suggested above) you can also install `edit` the same way:
+这是可选的，但我建议您安装一个名为 [edit](https://github.com/microsoft/edit) 的文本编辑器。
+我认为它是最简单、最直观的替代方案。
+如果您使用 `mise` 安装了 Jujutsu（如上所述），您也可以用同样的方式安装 `edit`：
 
 ```sh
 mise install-into edit@latest /tmp/edit-install
@@ -173,16 +173,16 @@ mv /tmp/edit-install/edit ~/.local/bin
 rm -rf /tmp/edit-install
 ```
 
-If you installed Jujutsu using another method, you'll want to install `edit` on your own as well.
+如果您使用其他方法安装了 Jujutsu，您也需要自行安装 `edit`。
 
-Next, we need to configure Jujutsu to use `edit` when opening a text file:
+接下来，我们需要配置 Jujutsu 在打开文本文件时使用 `edit`：
 
 ```sh
 jj config set --user ui.editor edit
 ```
 
-From now on, when Jujutsu opens a text file for you, it will do so using `edit`.
-When you're done editing a file, click on "File", then "Exit", in the menu bar or press <kbd>Ctrl+Q</kbd> to exit the text editor.
-It will ask you if you want to save the file, which you confirm by pressing <kbd>Enter</kbd>.
-That's it!
-I will remind you how it works the first time we need it.
+从现在开始，当 Jujutsu 为您打开文本文件时，它将使用 `edit`。
+当您编辑完文件后，点击菜单栏中的 "File"，然后点击 "Exit"，或按 <kbd>Ctrl+Q</kbd> 退出文本编辑器。
+它会询问您是否要保存文件，按 <kbd>Enter</kbd> 确认。
+就是这样！
+在我们第一次需要它时，我会提醒您它的工作方式。

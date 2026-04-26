@@ -1,7 +1,7 @@
-# Adding more bookmarks
+# 添加更多书签
 
-````admonish reset title="Reset your progress" collapsible=true
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置你的进度" collapsible=true
+要重置你的进度到本章开头，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s more_bookmarks
@@ -9,22 +9,22 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-Let's switch back to Alice:
+让我们切换回 Alice：
 
 ```sh
 cd ~/jj-tutorial/repo
 ```
 
-She heard rumors that next week's assignment is going to be about writing loops in Python.
-In an attempt to stay ahead of the game, she extends the hello-world program with iteration:
+她听说下周的作业将是关于在 Python 中编写循环的。
+为了保持领先，她用迭代扩展了 hello-world 程序：
 
 ```sh
 echo 'for (i = 0; i < 10; i = i + 1):
     print("Hello, world!")' > hello.py
 ```
 
-Unfortunately, she seems to have made a mistake.
-Running `python hello.py` prints an error:
+不幸的是，她似乎犯了一个错误。
+运行 `python hello.py` 打印出一个错误：
 
 ```
   File "/home/user/jj-tutorial/repo/hello.py", line 1
@@ -33,28 +33,28 @@ Running `python hello.py` prints an error:
 SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
 ```
 
-Alice doesn't have time to figure out the problem.
-She decides it's best to wait for the teacher to explain how to do it correctly in next week's lecture.
-She doesn't just want to throw her changes away though.
-She wants to keep the experiment around so she can compare it to the correct version later.
-As usual, she creates a new commit before pushing:
+Alice 没有时间弄清楚这个问题。
+她觉得最好等老师在下一周的课上解释如何正确地做。
+不过她也不想直接把更改扔掉。
+她想保留这个实验，以便以后可以与正确的版本进行比较。
+像往常一样，她在推送前创建一个新的提交：
 
 ```sh
-jj commit -m "WIP: Add for loop (need to fix syntax)"
+jj commit -m "WIP：添加 for 循环（需要修复语法）"
 ```
 
-Pushing work-in-progress (WIP) changes like this directly to the main bookmark would be a bad idea.
-Imagine if Bob later created a submission tarball and it accidentally included Alice's incomplete, incorrect code!
-That would be no good.
-To avoid that, Alice decides to push her commit to a new bookmark.
+像这样直接将进行中的工作（WIP）更改推送到主书签是个坏主意。
+想象一下，如果 Bob 后来创建一个提交压缩包，却意外包含了 Alice 不完整且不正确的代码！
+那可不行。
+为了避免这种情况，Alice 决定将她的提交推送到一个新的书签。
 
-What should be the name of that bookmark?
-Having a `main` bookmark is a strong convention, but for additional ones, anything goes.
-A simple approach is to just use a super short description of your changes, like `add-for-loop`.
-Some people like to prefix their bookmark names with their own name or username, allowing everyone to easily identify who's working on what: `alice/add-for-loop`.
-Still others include a ticket number from their bug-tracker software in the bookmark name.
-These are all fine options, but sometimes you _just don't care_.
-Jujutsu has a handy way to push changes quickly by generating a bookmark name for you:
+那个书签应该叫什么名字？
+拥有一个 `main` 书签是一个很强的约定，但对于额外的书签，什么都可以。
+一个简单的方法是直接用对更改的超短描述，比如 `add-for-loop`。
+有些人喜欢在书签名前面加上自己的名字或用户名，这样每个人都能轻松识别谁在做什么：`alice/add-for-loop`。
+还有一些人会在书签名中加入错误跟踪软件的工单号。
+这些都是不错的选择，但有时你_根本不在乎_。
+Jujutsu 有一个方便的方法，可以快速推送更改，为你生成一个书签名：
 
 ```sh
 jj git push --change @-
@@ -71,13 +71,13 @@ jj git push --change @-
 ~
 </pre>
 
-The name of the generated bookmark is `push-`, followed by a prefix of the change ID.
-It's not very informative, but that's kind of the point.
-The content of the commit is what's important, the bookmark is only needed to send it to the remote.
+生成的书签名是 `push-`，后跟变更ID的前缀。
+它信息量不大，但这正是它的意义所在。
+提交的内容才是重要的，书签只是将其发送到远程所需的工具。
 
-Note that the `--change` flag can be abbreviated as `-c`.
-You might be noticing a pattern here, many commonly-used flags have these short versions.
-You can explore the available flags of any Jujutsu command by calling it with the `--help` flag, e.g. `jj git push --help`.
+注意，`--change` 标志可以缩写为 `-c`。
+你可能注意到了一种模式，许多常用的标志都有这些简短版本。
+你可以通过使用 `--help` 标志调用任何 Jujutsu 命令来探索其可用的标志，例如 `jj git push --help`。
 
-Alice's experiment with Python loops is now safely stored on the remote with a bookmark, but it doesn't interfere with unrelated work progressing on the main branch.
-Great!
+Alice 的 Python 循环实验现在安全地存储在远程上并带有一个书签，但它不会干扰 main 分支上正在进行的不相关工作。
+太棒了！

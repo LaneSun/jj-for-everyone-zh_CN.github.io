@@ -1,99 +1,99 @@
-# Terminal basics
+# 终端基础
 
-This chapter is not about Jujutsu or even version control.
-But the tutorial requires you to work in the terminal, so let's cover the basics.
-If you're already comfortable in the terminal, you can confidently skip this chapter.
+本章与 Jujutsu 甚至版本控制都无关。
+但本教程要求你在终端中操作，所以让我们来了解一下基础知识。
+如果你在终端中已经得心应手，可以自信地跳过本章。
 
-There are a lot of small things to cover, so here's a little table of contents:
+有许多小知识点需要涵盖，所以这里有一个小目录：
 
 <!--toc:start-->
-- [What is the terminal?](#what-is-the-terminal)
-- [The prompt](#the-prompt)
-- [Entering commands](#entering-commands)
-- [The current working directory](#the-current-working-directory)
-- [Copy-pasting commands](#copy-pasting-commands)
-- [Redirection](#redirection)
-- [Pagers](#pagers)
-- [Variables and the environment](#variables-and-the-environment)
-- [The `PATH` variable](#the-path-variable)
-- [Startup scripts](#startup-scripts)
+- [什么是终端？](#什么是终端)
+- [提示符](#提示符)
+- [输入命令](#输入命令)
+- [当前工作目录](#当前工作目录)
+- [复制粘贴命令](#复制粘贴命令)
+- [重定向](#重定向)
+- [分页器](#分页器)
+- [变量与环境](#变量与环境)
+- [`PATH` 变量](#path-变量)
+- [启动脚本](#启动脚本)
 <!--toc:end-->
 
-## What is the terminal?
+## 什么是终端？
 
-The terminal is an application that lets you enter commands to the operating system in the form of text.
-The commands usually produce text themselves, which will be displayed to you.
+终端是一个允许你以文本形式向操作系统输入命令的应用程序。
+这些命令通常本身也会产生文本输出，并显示给你。
 
-The terminal used to be the primary way people interact with a computer.
-That was before the time of graphical user interfaces.
-Today, the terminal works much the same as it did in the past, but it's inside a normal app window now.
-The app can have different names, but "Terminal" and "Console" or variations thereof are most common.
+终端曾经是人们与计算机交互的主要方式。
+那是在图形用户界面出现之前的时代。
+今天，终端的运作方式与过去大致相同，但它现在运行在一个普通的应用窗口内。
+这个应用程序可能有不同的名称，但"Terminal"和"Console"或其变体是最常见的。
 
-## The prompt
+## 提示符
 
-When you start the terminal, the initial text you will see is called the **prompt**.
-Whenever a command finishes running, the prompt will be shown again.
-That's your sign that you can start entering your next command.
-Here's an example of what a prompt can look like:
+当你启动终端时，你最初看到的文本称为**提示符**。
+每当一个命令运行完毕后，提示符会再次出现。
+这是告诉你你可以开始输入下一个命令的标志。
+以下是一个提示符可能的样子示例：
 
 ```
 [username@hostname ~]$
 ```
 
-This shows some information that'll be useful later, but don't worry about it for now.
-The prompt usually ends with a dollar **`$`** or percent **`%`** sign, so you can easily recognize it.
-The dollar sign is often used as a short representation of the prompt.
+它显示了一些稍后会有用的信息，但现在不用管它。
+提示符通常以美元符号 **`$`** 或百分号 **`%`** 结尾，这样你就可以轻松地识别它。
+美元符号通常被用作提示符的简写表示。
 
-## Entering commands
+## 输入命令
 
-Being presented with the prompt is our cue to execute commands, so let's do that.
-Type the following and then press <kbd>Enter</kbd>:
+看到提示符就是执行命令的信号，让我们来试试。
+输入以下内容，然后按 <kbd>Enter</kbd>：
 
 ```sh
 echo Hello, terminal!
 ```
 
-The terminal will split your commands into words based on whitespace.
-The above command has three words:
+终端会根据空格将你的命令拆分成单词。
+上面的命令有三个单词：
 - `echo`
 - `Hello,`
 - `terminal!`
 
-The first word is the program to run.
-The terminal will find a program called `echo` on your computer and run it with the two **arguments** `Hello,` and `terminal!`.
-The program is free to interpret these arguments however it wants.
-The program called `echo` happens to simply print its arguments back to the terminal:
+第一个单词是要运行的程序。
+终端会在你的电脑上找到一个名为 `echo` 的程序，并带着两个**参数** `Hello,` 和 `terminal!` 来运行它。
+程序可以自由地按照自己的方式解释这些参数。
+名为 `echo` 的程序恰好只是简单地将它的参数打印回终端：
 
 ```console
 $ echo Hello, terminal!
 Hello, terminal!
 ```
 
-## The current working directory
+## 当前工作目录
 
-One fundamental concept of the terminal is the **current working directory**.
-It's a location in your filesystem, the one "where you currently are".
+终端的一个基本概念是**当前工作目录**。
+它是你文件系统中的一个位置，也就是"你当前所在的位置"。
 
-Most commands you run behave differently based on this "current location".
-Because of that, we need to be able to change it.
-The command to do that is called `cd`, short for "change directory".
-You probably have a folder called "Downloads", but you can substitute a different one in this example:
+你运行的大多数命令会根据这个"当前位置"产生不同的行为。
+因此，我们需要能够改变它。
+实现这个功能的命令叫做 `cd`，是"change directory"的缩写。
+你可能有一个名为"Downloads"的文件夹，但你可以在这个例子中替换为别的文件夹：
 
 ```console
 [username@hostname ~]$ cd Downloads
 [username@hostname Downloads]$
 ```
 
-Oh!
-Did you notice that **the prompt changed**?
-The current working directory, or CWD for short, is so important that it's usually shown somewhere in the prompt.
-That way you always know "where you are".
+哦！
+你注意到**提示符变了吗**？
+当前工作目录（简称 CWD）非常重要，所以它通常显示在提示符的某个位置。
+这样你就能始终知道自己"在哪里"。
 
-Before running `cd` in the example above, the CWD was apparently the tilde **`~`** character.
-That's a shorthand for your user's **home directory**.
-On Linux, that's `/home/username`.
-Another way to determine your CWD is to call the command `pwd`, short for "print working directory".
-It expands the shorthand tilde **`~`** character to its full path.
+在上面的例子中运行 `cd` 之前，CWD 显然是一个波浪号 **`~`** 字符。
+那是你用户的**主目录**的简写。
+在 Linux 上，它是 `/home/username`。
+另一种确定你 CWD 的方法是调用 `pwd` 命令，它是"print working directory"的缩写。
+它会将简写的波浪号 **`~`** 字符展开为完整路径。
 
 ```
 [username@hostname Downloads]$ pwd
@@ -101,102 +101,102 @@ It expands the shorthand tilde **`~`** character to its full path.
 [username@hostname Downloads]$
 ```
 
-One example of a CWD-aware command is `ls`, which lists files and directories.
-Go ahead and run `ls` in your `Downloads` folder.
-Maybe it's time to clean it up a little...?
+一个依赖于 CWD 的命令的例子是 `ls`，它可以列出文件和目录。
+去在你的 `Downloads` 文件夹中运行 `ls` 试试。
+也许是时候稍微清理一下了……？
 
-The important lesson to take away here is:
-**Be aware of your current working directory**.
-If a command doesn't do what you want, you might just be in the wrong place.
+这里要记住的重要教训是：
+**要注意你的当前工作目录**。
+如果命令没有按你的预期执行，你可能只是待在了错误的地方。
 
 
-## Copy-pasting commands
+## 复制粘贴命令
 
-This tutorial contains many code blocks that contain commands for you to copy-paste into your terminal.
-Multiple commands can be on separate lines and you can copy-paste them all at once without issues.
-If you hover your mouse over the top-right corner of a code block, a hidden copy-button will appear.
-Very useful!
+本教程包含许多代码块，其中包含供你复制粘贴到终端中的命令。
+多个命令可以在单独的行上，你可以一次性复制粘贴它们而不会有问题。
+如果你将鼠标悬停在代码块的右上角，会出现一个隐藏的复制按钮。
+非常有用！
 
-For historical reasons, <kbd>Ctrl</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>V</kbd> don't do copy and paste in the terminal.
-Instead, you need to use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>/<kbd>V</kbd> respectively.
-If you're using a Mac, <kbd>Command</kbd>+<kbd>C</kbd>/<kbd>V</kbd> works normally.
+出于历史原因，<kbd>Ctrl</kbd>+<kbd>C</kbd> 和 <kbd>Ctrl</kbd>+<kbd>V</kbd> 在终端中并不执行复制和粘贴操作。
+相反，你需要分别使用 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>/<kbd>V</kbd>。
+如果你用的是 Mac，<kbd>Command</kbd>+<kbd>C</kbd>/<kbd>V</kbd> 可以正常使用。
 
-If you forget about this and type <kbd>Ctrl</kbd>+<kbd>V</kbd> without <kbd>Shift</kbd> in an attempt to paste a command into the terminal, it will actually get messed up a little.
-You can't just try again with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd>.
-You would end up with something like this:
+如果你忘了这一点，在没有按 <kbd>Shift</kbd> 的情况下输入了 <kbd>Ctrl</kbd>+<kbd>V</kbd> 试图将命令粘贴到终端中，它实际上会变得有点混乱。
+你不能直接用 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> 再试一次。
+你会得到类似这样的东西：
 
 ```console
 $ ^[[200~echo Hello, terminal!~
 ```
 
-These weird characters are an "escape sequence" caused by typing <kbd>Ctrl</kbd>+<kbd>V</kbd> without <kbd>Shift</kbd>.
-This command will not work.
-So, if you make the mistake of forgetting <kbd>Shift</kbd>, just hit <kbd>Enter</kbd> a couple of times until you get a fresh prompt, then try again.
+这些奇怪的字符是由于在没有按 <kbd>Shift</kbd> 的情况下输入 <kbd>Ctrl</kbd>+<kbd>V</kbd> 而产生的"转义序列"。
+这条命令将无法执行。
+所以，如果你犯了忘记按 <kbd>Shift</kbd> 的错误，只需按几次 <kbd>Enter</kbd> 直到得到一个全新的提示符，然后再试一次。
 
-Some of the commands will contain **comments**, which are lines of text following a pound **`#`** character.
-The terminal simply ignores them.
-They are used to make commands more understandable to human readers, but they don't affect the command execution.
+一些命令会包含**注释**，即跟在井号 **`#`** 字符后面的文本行。
+终端会简单地忽略它们。
+它们用于让命令更易于人类读者理解，但不会影响命令的执行。
 
-You can practice by copy-pasting the following command into your terminal:
+你可以通过将以下命令复制粘贴到终端中来练习：
 
 ```sh
-# Here are some example comments:
+# 这里是一些示例注释：
 #
-# This is the program being run.
+# 这是要运行的程序。
 # |
-# |  This is the start of the first argument.
+# |  这是第一个参数的开头。
 # |  |
-# |  |      This is the start of the second argument.
+# |  |      这是第二个参数的开头。
 # v  v      v
-echo Hello, terminal! # Placing a comment next to a command is also allowed.
+echo Hello, terminal! # 在命令旁边放置注释也是允许的。
 ```
 
-## Redirection
+## 重定向
 
-We've seen how the `echo` command prints its arguments back to the terminal.
-But that's just the default.
-`echo` just prints to something called "standard out", or "stdout".
-That is usually connected to your terminal.
-But you can also **redirect** the stdout of a program, for example to a file with the `>` operator.
-An example looks like this:
+我们已经看到 `echo` 命令如何将它的参数打印回终端。
+但这只是默认行为。
+`echo` 只是将内容打印到所谓的"标准输出"或"stdout"。
+它通常连接到你的终端。
+但你也可以将程序的 stdout **重定向**，例如使用 `>` 操作符重定向到一个文件。
+一个例子如下：
 
 ```sh
 echo "bread, onions, tea" > groceries.txt
 ```
 
-If you run this command, it will create a file called "groceries.txt" in your CWD.
-The content of the file will be "bread, onions, tea".
-If a file with the same name already existed, it will be **overwritten**.
-In addition to the `>` operator, there is also the `>>` operator.
-It _appends_ text to the end of a file, instead of _overwriting_ it.
+如果你运行这个命令，它会在你的 CWD 中创建一个名为"groceries.txt"的文件。
+文件内容将是"bread, onions, tea"。
+如果已经存在同名文件，它将被**覆盖**。
+除了 `>` 操作符，还有 `>>` 操作符。
+它会将文本_追加_到文件末尾，而不是_覆盖_它。
 
-In this book, I will often tell you to manipulate a file by running a command that looks like the one above.
+在本书中，我经常会让你通过运行类似上面的命令来操作文件。
 
-## Pagers
+## 分页器
 
-Some commands you run in the terminal print a lot of text.
-It can be tedious to scroll all the way back up to the point where the command output started.
-This is where a **pager** can help.
-It takes the output from another program and shows it to you from the beginning.
+你在终端中运行的一些命令会打印大量文本。
+一直向上滚动回到命令输出开始的位置可能会很繁琐。
+**分页器**就可以在这里提供帮助。
+它接收另一个程序的输出，并从头开始显示给你。
 
-Some programs will display their output in a pager automatically, because they know they will be printing a lot of text.
-Jujutsu also does that sometimes.
-Given that you may "accidentally" end up in a pager, you need to know that you can **exit a pager by typing** <kbd>q</kbd>!
+有些程序会自动将它们的输出显示在分页器中，因为它们知道自己会打印大量文本。
+Jujutsu 有时也会这样做。
+考虑到你可能会"不小心"进入分页器，你需要知道你可以**通过输入** <kbd>q</kbd> **退出分页器**！
 
-If the output of Jujutsu is displayed in a pager, the bottom left corner will be a colon `:` character and your prompt won't be shown.
-One way you can experiment with using a pager is by running `man tar`, which opens the manual page for the `tar` command.
+如果 Jujutsu 的输出显示在分页器中，左下角会是一个冒号 `:` 字符，并且你的提示符不会显示。
+你可以通过运行 `man tar` 来体验使用分页器，这会打开 `tar` 命令的手册页。
 
-Various key bindings let you navigate in the pager.
-The arrow keys, "page up" and "page down" all work as expected.
-Another super useful one is this:
-Typing <kbd>/</kbd> allows you to enter a search term, then <kbd>Enter</kbd> starts the search.
-Step through the search hits with (lowercase) <kbd>n</kbd> and step backwards with (uppercase) <kbd>N</kbd>.
+各种按键绑定可以让你在分页器中导航。
+方向键、"page up"和"page down" 都按预期工作。
+另一个超级有用的是：
+输入 <kbd>/</kbd> 可以让你输入一个搜索词，然后按 <kbd>Enter</kbd> 开始搜索。
+使用（小写）<kbd>n</kbd> 在搜索结果中向前跳转，使用（大写）<kbd>N</kbd> 向后跳转。
 
-## Variables and the environment
+## 变量与环境
 
-Running programs on your computer by typing their name is only scratching the surface of what the terminal can do.
-It actually has a whole little programming / scripting language built-in.
-For example, you can store values in variables with the equal **`=`** sign and evaluate them with the dollar **`$`** sign:
+通过输入程序名称来在你的电脑上运行程序，只是终端功能的冰山一角。
+它实际上内置了一整套小型编程/脚本语言。
+例如，你可以用等号 **`=`** 将值存储在变量中，并用美元符号 **`$`** 来引用它们：
 
 ```console
 $ my_name=Alice
@@ -204,13 +204,13 @@ $ echo Hello, $my_name!
 Hello, Alice!
 ```
 
-Normal variables like above cannot be read by programs you run.
-They are only for your own use in the current terminal session.
-However, variables can be **exported** into the **environment**, which makes them accessible for programs to read.
-This is an alternative way to tell programs what you want them to do.
-The more common way is with arguments on the command line, but exported variables are useful in some situations.
+像上面的普通变量无法被你运行的程序读取。
+它们只能供你自己在当前终端会话中使用。
+但是，变量可以被**导出**到**环境**中，这样就可以被程序读取了。
+这是另一种告诉程序你想要它们做什么的替代方式。
+更常见的方式是通过命令行上的参数，但导出的变量在某些情况下也很有用。
 
-You can export a variable separately from setting its value or do it all in one line:
+你可以单独导出一个变量，也可以在一行内同时设置和导出：
 
 ```sh
 MY_NAME=Alice
@@ -221,94 +221,94 @@ export MY_NAME
 export MY_NAME=Alice
 ```
 
-Such exported variables are usually referred to as **environment variables**.
-They are not _required_ to be uppercase, but it's a strong convention.
-It makes it easy to know which variables can be read by other programs.
+这种导出的变量通常被称为**环境变量**。
+它们_不要求_必须大写，但这是一个很强的惯例。
+大写可以让人轻松知道哪些变量可以被其他程序读取。
 
-## The `PATH` variable
+## `PATH` 变量
 
-One environment variable that can be difficult to understand at first is the `PATH` variable.
-First, let's print it to see what it contains:
+一个一开始可能难以理解的环境变量是 `PATH` 变量。
+首先，让我们打印它来看看它包含什么：
 
 ```console
 $ echo $PATH
 /home/username/.local/bin:/usr/local/bin:/usr/bin
 ```
 
-Your output may well look different, but the structure is the same:
-It's a list of filesystem paths separated by the colon **`:`** character.
-In this case, there are three paths:
+你的输出可能看起来不同，但结构是相同的：
+它是一个由冒号 **`:`** 字符分隔的文件系统路径列表。
+在这个例子中，有三个路径：
 - `/home/username/.local/bin`
 - `/usr/local/bin`
 - `/usr/bin`
 
-What do these three paths mean?
-They are the places where your terminal searches for programs to run!
-Let's mess with it to see what happens.
-Set the `PATH` variable to the empty string:
+这三个路径是什么意思？
+它们是你的终端搜索要运行的程序的地方！
+让我们弄乱它看看会发生什么。
+将 `PATH` 变量设置为空字符串：
 
 ```sh
 export PATH=""
 ```
 
-Now try to run a program, like `ls` for example:
+现在尝试运行一个程序，比如 `ls`：
 
 ```console
 $ ls
 bash: ls: No such file or directory
 ```
 
-Oops.
-Setting the `PATH` variable to the empty string tells the terminal to _not search for programs anywhere_.
-Therefore, the programs `ls` cannot be found anymore.
+糟糕。
+将 `PATH` 变量设置为空字符串告诉终端_不要在任何地方搜索程序_。
+因此，程序 `ls` 无法再被找到。
 
-We could fix this by copy-pasting the previous value of `PATH` and export that again.
-But if you mess up the value of an environment variable for real, you often don't know what the previous, correct value was.
-So it's easiest to just close the terminal window and open a new one.
-All variables will be reset to their default.
+我们可以通过复制粘贴 `PATH` 的先前值并重新导出来修复这个问题。
+但如果你真的搞乱了环境变量的值，你通常不知道之前正确的值是什么。
+所以最简单的方法是关闭终端窗口并打开一个新的。
+所有变量都将重置为默认值。
 
-So, if modifying the `PATH` variable can break your session, should you just never touch it?
-Not quite.
-Sometimes you want (or need) to install programs in a different location than where your terminal searches for them by default.
-In that case, you need to _extend_ the list of paths stored in the `PATH` variable.
-Here's an example:
+那么，如果修改 `PATH` 变量可能会破坏你的会话，你是不是应该永远不碰它？
+也不完全是。
+有时你想要（或需要）将程序安装在与终端默认搜索位置不同的地方。
+在这种情况下，你需要_扩展_存储在 `PATH` 变量中的路径列表。
+以下是一个例子：
 
 ```sh
 export PATH="/home/username/my-local-programs:$PATH"
 ```
 
-This starts with a new path at the front of the list, then there's the colon **`:`** separator and lastly the rest of the list, which is the previous value stored in `PATH`.
+这会在列表的最前面放置一个新路径，然后是冒号 **`:`** 分隔符，最后是列表的其余部分，即存储在 `PATH` 中的先前值。
 
-## Startup scripts
+## 启动脚本
 
-The above command to edit the `PATH` variable will only affect the current terminal session.
-So, if you close the terminal and reopen a new window, the value of `PATH` will be reset to its default.
-But that may not be desirable.
-If you install programs into a custom location, you may want all your future terminal sessions to find those programs automatically.
+上面编辑 `PATH` 变量的命令只会影响当前的终端会话。
+所以，如果你关闭终端并重新打开一个新窗口，`PATH` 的值将被重置为默认值。
+但这可能不是我们想要的。
+如果你将程序安装到了自定义位置，你可能希望所有未来的终端会话都能自动找到这些程序。
 
-That's where startup scripts come into play.
-They are files containing a list of commands (also known as **scripts**).
-_Startup_ scripts are automatically executed whenever you open a new terminal, before you can even type the first command.
-So that's the perfect place to make permanent changes to all your future terminal sessions!
+这就是启动脚本发挥作用的地方。
+它们是包含命令列表的文件（也称为**脚本**）。
+_启动_脚本会在你打开一个新终端时自动执行，甚至在你输入第一条命令之前。
+所以这是对你所有未来终端会话进行永久更改的完美位置！
 
-The location and name of your startup script depend on your **shell**, i.e. your specific "flavor" of terminal.
-The terminal is pretty standardized, so we mostly don't need to worry about different shells.
-This is an exception.
-If you're using Linux, your shell is probably called `bash`.
-If you're using Mac, your shell is probably called `zsh`.
-To find out for sure, you can read the `SHELL` environment variable:
+你的启动脚本的位置和名称取决于你的**shell**，即你特定的终端"变体"。
+终端是相当标准化的，所以我们大部分时候不需要担心不同的 shell。
+这是一个例外。
+如果你使用的是 Linux，你的 shell 很可能叫做 `bash`。
+如果你使用的是 Mac，你的 shell 很可能叫做 `zsh`。
+要确定起见，你可以读取 `SHELL` 环境变量：
 
 ```console
 $ echo $SHELL
 /bin/bash
 ```
 
-If your shell is `bash`, you should add your custom startup commands to the file **`~/.bashrc`**.
-In the case of `zsh`, the startup script is **`~/.zshrc`**.
+如果你的 shell 是 `bash`，你应该将你的自定义启动命令添加到文件 **`~/.bashrc`** 中。
+如果是 `zsh`，启动脚本是 **`~/.zshrc`**。
 
-For now, print the content of your startup script.
-It's probably complicated, so don't try to understand it all.
-Nevertheless, taking a look is a great way to get acquainted with the terminal:
+现在，打印你的启动脚本的内容。
+它可能很复杂，所以不要试图完全理解它。
+不过，看一看是熟悉终端的好方法：
 
 ```sh
 # for bash
@@ -320,11 +320,11 @@ cat ~/.bashrc
 cat ~/.zshrc
 ```
 
-```admonish success title="Now you know the basics of the terminal ! 🎉"
-If most of this stuff was news to you, pat yourself on the back!
-You've already learned a lot.
-This should be enough knowledge about the terminal to get you through the tutorial.
+```admonish success title="现在你了解了终端的基础知识！🎉"
+如果大部分内容对你来说是新鲜的，拍拍自己的背！
+你已经学到了很多。
+这些关于终端的知识应该足以让你完成本教程。
 
-Don't hesitate to come back here and revise from time to time.
-The rules of the terminal are not the most intuitive, so it can take a couple attempts for them to settle in.
+随时回来不时温习一下。
+终端的规则并不是最直观的，所以可能需要几次尝试才能熟练掌握。
 ```

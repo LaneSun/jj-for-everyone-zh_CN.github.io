@@ -1,7 +1,7 @@
-# Sending commits to a remote
+# 将提交发送到远程
 
-````admonish reset title="Reset your progress" collapsible=true
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置您的进度" collapsible=true
+要将您的进度重置到本章开头，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s remote
@@ -9,100 +9,100 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-We now have a commit which we don't want to lose.
-The way we're using Jujutsu right now, we don't have a backup at all.
-What would happen if we delete the `~/jj-tutorial/repo` directory on disk?
-The `.git` and `.jj` subdirectories would be deleted as well.
-Since our entire version control database is stored in there, we wouldn't be able to recover any of our work!
+我们现在有一个不想丢失的提交。
+按照我们目前使用 Jujutsu 的方式，我们根本没有备份。
+如果我们删除了磁盘上的 `~/jj-tutorial/repo` 目录会发生什么？
+`.git` 和 `.jj` 子目录也会被删除。
+由于我们整个版本控制数据库都存储在其中，我们将无法恢复任何工作！
 
-We can fix that by duplicating our commit at another location, a so-called **remote**.
-Besides providing a backup, sending commits to a remote also allows you to share your work more easily for collaboration.
+我们可以通过将提交复制到另一个位置来修复这个问题，即所谓的**远程**。
+除了提供备份之外，将提交发送到远程还允许您更轻松地共享工作以便协作。
 
-The most popular form of a remote is to host a repository with an online service like [GitHub](https://github.com/).
-That requires an account and a little setup though, so we'll use a simpler approach in this tutorial.
-Your remote will be stored in a new directory on your computer, at a different location than your primary repository.
-That style of remote is bad as a backup and bad for collaboration, but it's perfect for learning how remotes work.
-There are a few practical tips about using GitHub in a [later chapter](github.md).
+最流行的远程形式是使用 [GitHub](https://github.com/) 等在线服务托管仓库。
+但这需要账户和一点设置，因此在本教程中我们将使用一种更简单的方法。
+您的远程将存储在您计算机上的一个新目录中，位置与您的主仓库不同。
+这种远程方式作为备份不好，用于协作也不好，但它非常适合学习远程的工作方式。
+[后面的章节](github.md)中有一些关于使用 GitHub 的实用技巧。
 
-## Initializing the remote
+## 初始化远程
 
-The following command will initialize a new repository for use as a remote:
+以下命令将初始化一个新仓库作为远程使用：
 
 ```sh
 git init --bare -b main ~/jj-tutorial/remote
 ```
 
-Since you will likely use a different style of remote for real projects, you don't need to understand the details here.
-If you're curious anyway, expand the text box below.
+由于您在实际项目中可能会使用不同类型的远程，因此您无需理解此处的细节。
+如果您还是好奇，请展开下面的文本框。
 
-````admonish note title="The difference between remote (bare) and regular repositories" collapsible=true
-`git init --bare` is very similar to `jj git init`, which we used to create our main repository.
-However, instead of a "regular" Jujutsu repository, it creates a "bare" Git repository.
+````admonish note title="远程（裸）仓库与常规仓库的区别" collapsible=true
+`git init --bare` 与 `jj git init` 非常相似，我们曾用后者来创建我们的主仓库。
+然而，它不是创建一个"常规" Jujutsu 仓库，而是创建一个"裸" Git 仓库。
 
-What's the difference?
+区别是什么？
 
-Think of a regular Jujutsu repository as consisting of two parts: (1) Jujutsu's internal database stored in the `.git` and `.jj` directories and (2) all the actual files of your project, which you can modify - your **working copy**.
-The term "copy" is key here, because all the files are also stored in the internal database.
-The only reason a copy of the files exists outside the database is so you can read and modify them - "work" with them.
-So, "working copy" is a fitting name indeed.
+将常规 Jujutsu 仓库想象为由两部分组成：(1) 存储在 `.git` 和 `.jj` 目录中的 Jujutsu 内部数据库，以及 (2) 您可以修改的所有实际项目文件——您的**工作副本**。
+"副本"这个词在这里很关键，因为所有文件也存储在内部数据库中。
+文件在数据库之外存在的唯一原因是您可以阅读和修改它们——与之"工作"。
+所以，"工作副本"确实是一个贴切的名称。
 
-A bare repository is a Git repository **without a working copy** and without any Jujutsu-specific metadata.
-Since we will only use the bare repository for sending and receiving commits, we don't need a working copy or the `.jj` directory.
+裸仓库是一个**没有工作副本**且没有任何 Jujutsu 特定元数据的 Git 仓库。
+由于我们只使用裸仓库来发送和接收提交，因此不需要工作副本或 `.jj` 目录。
 
-If you inspect the content of the new bare repository, it will look very similar in structure to the content of the `.git` directory in our main repository:
+如果您检查新裸仓库的内容，它的结构看起来会与主仓库中 `.git` 目录的内容非常相似：
 ```
 ls -lah ~/jj-tutorial/repo/.git
 ls -lah ~/jj-tutorial/remote
 ```
 
-The `-b main` part ensures the default branch is called "main".
-If unspecified, the default branch can be different based on installation, configuration, etc.
-This would cause problems later.
+`-b main` 部分确保默认分支被称为 "main"。
+如果不指定，默认分支可能会因安装、配置等不同而不同。
+这将在以后导致问题。
 ````
 
-## Connecting to a remote
+## 连接到远程
 
-A repository is connected to a remote by storing its location under a specific name.
-Remotes can be called anything, but when there is only one, the convention is to call it **origin**:
+仓库通过将一个远程的位置存储在一个特定的名称下来与之连接。
+远程可以叫任何名字，但当只有一个远程时，惯例是将其称为 **origin**：
 
 ```sh
 jj git remote add origin ~/jj-tutorial/remote
 ```
 
-Here we connect to the remote by specifying its path on our filesystem.
-When using a repository hosted on GitHub or similar services, the path is replaced with a URL.
-More on that later.
-If everything went well, `origin` should now appear in the list of remotes:
+这里我们通过指定远程在我们文件系统上的路径来连接它。
+当使用托管在 GitHub 或类似服务上的仓库时，路径会被替换为 URL。
+稍后会详细介绍。
+如果一切顺利，`origin` 现在应该出现在远程列表中：
 
 ```sh
 jj git remote list
 ```
 
-## Adding a bookmark
+## 添加书签
 
-There is another speed bump before we can send our work to the remote.
-Remote repositories can receive a lot of commits, not all of which end up being needed in the long run.
-Therefore, it's desirable that commits which aren't needed anymore can be deleted automatically.
-How does the remote know which commits to delete and which to keep?
-With bookmarks!
+在我们可以将工作发送到远程之前，还有一个小障碍。
+远程仓库可以接收很多提交，但并非所有提交最终都长期需要。
+因此，最好能够自动删除不再需要的提交。
+远程如何知道哪些提交要删除，哪些要保留？
+通过书签！
 
-A bookmark is a simple named label that's attached to a commit.
-Every commit with such a bookmark label is considered important and won't be deleted automatically.
-Because of that mechanism, a bookmark is _required_ for sending commits to a remote.
+书签是一个附加在提交上的简单命名标签。
+每个带有这种书签标签的提交被认为是重要的，不会被自动删除。
+由于这种机制，书签是向远程发送提交的_必需_条件。
 
-Let's create a bookmark called **main** and point it to our completed commit.
-The name "main" is a convention that represents the primary state of the project.
-In legacy projects, the name "master" is also still in widespread use.
+让我们创建一个名为 **main** 的书签，并将其指向我们已完成的提交。
+名称 "main" 是表示项目主要状态的惯例。
+在遗留项目中，名称 "master" 也仍然广泛使用。
 
 ```sh
-jj bookmark create main --revision mkmqlnox # <- substitute your change ID here
+jj bookmark create main --revision mkmqlnox # <- 在此处替换您的变更ID
 ```
 
-The command `jj bookmark create` expects a name (`main`) and a commit to which the bookmark should point.
-We identify the commit by its change ID (`--revision mkmqlnox`).
-For our purposes, the word "revision" is a synonym for "commit".
-The flag `--revision` can also be abbreviated as `-r`.
-Let's check the result with `jj log`:
+命令 `jj bookmark create` 需要一个名称（`main`）和书签应指向的提交。
+我们通过变更ID（`--revision mkmqlnox`）来标识提交。
+就我们的目的而言，"revision" 是"commit"的同义词。
+标志 `--revision` 也可以缩写为 `-r`。
+让我们用 `jj log` 检查结果：
 
 <!-- generated by aha script -->
 <pre class="aha">
@@ -113,15 +113,15 @@ Let's check the result with `jj log`:
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">0000000</span>
 </pre>
 
-Great!
-We can see that the bookmark `main` is correctly pointing to our recently completed commit.
+太好了！
+我们可以看到书签 `main` 正确地指向了我们最近完成的提交。
 
-## Pushing the bookmark
+## 推送书签
 
-Now that we're connected and have a bookmark, let's finally send our commit to the remote.
-The technical term for sending commits is "pushing" them.
-You will often hear phrases like "pushing to the remote" or "pushing to GitHub".
-The command for pushing a specific bookmark is:
+现在我们已经连接并有了书签，让我们最终将提交发送到远程。
+发送提交的技术术语是"推送"它们。
+您经常会听到诸如"推送到远程"或"推送到 GitHub"这样的说法。
+推送特定书签的命令是：
 
 ```sh
 jj git push --bookmark main

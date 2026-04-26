@@ -1,29 +1,29 @@
-# Level 3
+# 等级 3
 
-This level will provide you with basic problem solving skills like conflict resolution and restoring files from history.
-Without this knowledge, it's only a matter of time until you run into trouble.
+本等级将为您提供基本的解决问题技能，例如冲突解决和从历史中恢复文件。
+没有这些知识，您迟早会遇到麻烦。
 
-Here's the cheat sheet for level 3. You may also want to revise the [level 2 cheat sheet](./level_2.md).
+以下是等级 3 的速查表。您可能还想复习一下[等级 2 速查表](./level_2.md)。
 
-````admonish info title="cheat sheet"
-Undo and redo the last operation on the repository
+````admonish info title="速查表"
+撤销和重做仓库上的最后一次操作
 ```sh
 jj undo
 jj redo
 ```
-Track a remote bookmark in order to push to it
+跟踪远程书签以便向其推送
 ```sh
 jj bookmark track <NAME>
 ```
-Delete a commit (and bookmarks pointing to it)
+删除提交（以及指向它的书签）
 ```sh
 jj abandon <CHANGE_ID>
 ```
-Restore the state (of a specific file) (from a specific commit)
+（从指定提交）恢复（特定文件的）状态
 ```sh
 jj restore [--from <CHANGE_ID>] [FILE_TO_RESTORE]
 ```
-Split a messy working copy
+拆分凌乱的工作副本
 ```sh
 jj commit --interactive
 ```

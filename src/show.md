@@ -1,7 +1,7 @@
-# Inspecting a commit
+# 检查提交
 
-````admonish reset title="Reset your progress" collapsible=true
-To reset your progress to the start of this chapter, run the following command:
+````admonish reset title="重置你的进度" collapsible=true
+要重置你的进度到本章开头，请运行以下命令：
 
 ```sh
 curl https://jj-for-everyone.github.io/reset.sh | bash -s show
@@ -9,10 +9,10 @@ cd ~/jj-tutorial/repo
 ```
 ````
 
-Alice has just found out that Bob made changes at the same time as she did.
-Before she attempts to somehow create a version that includes both changes, she wants to verify the two changes are compatible.
-She therefore decides to check out Bob's changes by using `jj show`.
-Since the remote bookmark `main` is pointing there, she can use that as identification.
+Alice 刚刚发现 Bob 和她同时做了更改。
+在她试图以某种方式创建一个包含两方更改的版本之前，她想验证这两处更改是兼容的。
+因此她决定用 `jj show` 来查看 Bob 的更改。
+由于远程书签 `main` 正指向那里，她可以使用它作为标识。
 
 ```
 jj show main@origin
@@ -40,53 +40,53 @@ Committer: <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local<
      <span class="green ">   5</span>: <span class="underline "></span><span class="underline green ">Programming is fun!</span><span class="green "></span>
 </pre>
 
-There's a lot of useful information here that `jj log` doesn't show.
-Let's go over it one-by-one:
+这里有很多 `jj log` 没有显示的有用信息。
+让我们逐一来看：
 
-- The first two lines are the commit ID and change ID.
-  We've seen them already, but these ones are longer!
-  That's because the output of `jj log` only shows you a **prefix** of the full ID.
-  The short prefix is usually enough to uniquely identify a commit, but sometimes you want the whole thing.
+- 前两行是提交 ID 和变更 ID。
+  我们之前已经见过它们了，但这次的更长！
+  那是因为 `jj log` 的输出只显示完整 ID 的**前缀**。
+  短前缀通常足以唯一标识一个提交，但有时你想要完整的。
 
-- Next is a list of bookmarks pointing to the commit.
+- 接下来是指向该提交的书签列表。
 
-- The following two lines are the author and committer information, as well as their timestamps.
-  Author and committer are usually the same, the difference is not important.
-  If you're curious anyway, there's a short explanation in the info box below.
+- 接下来的两行是作者和提交者的信息，以及它们的时间戳。
+  作者和提交者通常是相同的，其区别并不重要。
+  如果你还是好奇，下面的信息框中有一个简短的解释。
 
-- Then there's the commit message.
-  Notice that we see the full description here including its body.
-  `jj log` only displays the subject line to save space.
+- 然后是提交信息。
+  注意，我们在这里看到了完整的描述，包括正文。
+  `jj log` 为了节省空间只显示主题行。
 
-- Lastly, we see a list of files that have changed in this commit as well as the precise changes of their content.
-  The color green means "added" and red means "removed"
-  So we can see that this commit removed the previous line 3 and replaced it with three new lines.
-  The first line is neutral, indicating that it was not changed in this commit.
+- 最后，我们看到此提交中发生了更改的文件列表以及它们内容的精确变化。
+  绿色表示"添加"，红色表示"删除"。
+  所以我们可以看到这个提交删除了之前的第 3 行，并用三个新行替换了它。
+  第一行是中性色，表示它在此提交中没有被更改。
 
-````admonish note title="The difference between author and committer" collapsible=true
-The **author** of a commit is the primary person who wrote its content.
-In this case, that refers to the new paragraph being added to the readme.
-The **committer** on the other hand is the person who created the commit.
-Again, these are usually the same, because most of the time the person who writes something also immediately puts that in a commit.
+````admonish note title="作者和提交者的区别" collapsible=true
+提交的**作者**是撰写其内容的主要人员。
+在这种情况下，是指添加到 readme 中的新段落。
+另一方面，**提交者**是创建该提交的人。
+同样，这两者通常是相同的，因为大多数时候，撰写内容的人也会立即将其放入提交中。
 
-Let's imagine a scenario where that's not the case.
+让我们想象一个不是这种情况的场景。
 
-Before they started doing any work, Alice and Bob are joined by Claire as a third member of the team.
-Claire is not comfortable using version control yet, so they decide that Claire will write the documentation instead of Bob.
-Bob on the other hand will record Claire's changes in version control for safe keeping.
-That way, everyone can contribute something.
+在开始任何工作之前，Claire 作为第三名成员加入了 Alice 和 Bob 的团队。
+Claire 还不太习惯使用版本控制，所以他们决定让 Claire 来写文档而不是 Bob。
+而 Bob 则负责将 Claire 的更改记录在版本控制中以供安全保存。
+这样，每个人都能做出贡献。
 
-Claire writes the documentation and sends the `README.md` file to Bob as an attachement by email.
-Bob copies the file into his repository, recording it into the working copy commit as normal.
-He want's to preserve Claire's authorship information, so he runs the command:
+Claire 编写了文档并通过电子邮件将 `README.md` 文件作为附件发送给 Bob。
+Bob 将该文件复制到他的仓库中，像平常一样将其记录到工作副本提交中。
+他想保留 Claire 的作者信息，因此他运行了以下命令：
 
 ```sh
 jj metaedit --author "Claire <claire@local>"
 ```
 
-That command will overwrite the author information in the commit on a one-off basis.
-The committer field will continue to contain Bob's information.
-The result will look like this:
+该命令将一次性地覆盖提交中的作者信息。
+提交者字段则继续包含 Bob 的信息。
+结果将如下所示：
 
 <pre class="aha">
 Commit ID: <span class="blue ">8d53839037b21e262e410e087606925f7582914e</span>
@@ -99,6 +99,6 @@ Committer: <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local<
 </pre>
 ````
 
-Alice is pretty sure that Bob's changes are compatible with hers.
-He only changed the file `README.md`, while Alice didn't do anything besides adding `hello.py`.
-Her next task is to create a version of the project that combines both changes.
+Alice 非常确定 Bob 的更改与她的更改是兼容的。
+他只更改了文件 `README.md`，而 Alice 除了添加 `hello.py` 之外没有做其他事情。
+她的下一个任务是创建一个同时包含两方更改的项目版本。

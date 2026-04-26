@@ -1,20 +1,20 @@
-# Level 2
+# 等级 2
 
-This level will provide you with the minimum skills to start collaborating with others.
-If you're a student working on a group project or a professional software engineer, you absolutely need to know this.
+本等级将为你提供开始与他人协作所需的最基本技能。
+无论你是在做小组项目的学生，还是专业的软件工程师，都绝对需要了解这些内容。
 
-Here's the cheat sheet for level 2. You may also want to revise the [level 1 cheat sheet](./level_1.md).
+以下是等级 2 的速查表。你也可以复习一下[等级 1 速查表](./level_1.md)。
 
-````admonish info title="cheat sheet"
-Fetch new commits from your peers
+````admonish info title="速查表"
+从你的同伴那里拉取新的提交
 ```sh
 jj git fetch
 ```
-Merge your branched-off changes with the main bookmark
+将你分支出去的更改与主书签合并
 ```sh
 jj new main @-
 ```
-Push your latest commit to a new bookmark
+将你最新的提交推送到一个新的书签
 ```sh
 jj git push --change @-
 ```

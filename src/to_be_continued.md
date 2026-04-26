@@ -1,14 +1,14 @@
-# Must-know secret commands
+# 必须知道的秘密命令
 
-Hah, did I get you with the clickbait title? :-P
+哈，我用标题党吸引到您了吗？ :-P
 
-Sorry, that's all I have for you at the moment.
-Remember, there's an [overview of planned levels](watch_releases.md) in the introduction.
-If any of the future content sounds interesting to you, consider [subscribing to releases](watch_releases.md) on GitHub.
-That way I can notify you without knowing your email.
-I will also notify subscribers if a new release of Jujutsu changes something that's relevant to the content of this tutorial.
+抱歉，目前我只能提供这些内容。
+请记住，简介中有一个[计划等级的概述](watch_releases.md)。
+如果任何未来的内容对您来说听起来有趣，请考虑在 GitHub 上[订阅发布](watch_releases.md)。
+这样我可以在不知道您邮箱的情况下通知您。
+如果 Jujutsu 的新发布更改了与本教程内容相关的内容，我也会通知订阅者。
 
-I hope you learned some valuable skills in this tutorial.
-I always appreciate hearing your feedback, suggestions, experience reports and frustrated rants!
-Just [post an issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new) on GitHub.
-Thanks! ❤️
+我希望您在本教程中学到了一些有价值的技能。
+我始终感谢收到您的反馈、建议、经验报告和沮丧的吐槽！
+只需在 GitHub 上[提交一个 issue](https://github.com/jj-for-everyone/jj-for-everyone.github.io/issues/new)。
+谢谢！❤️

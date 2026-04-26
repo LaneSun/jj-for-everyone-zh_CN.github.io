@@ -1,13 +1,13 @@
-# Using GitHub (optional)
+# 使用 GitHub（可选）
 
-As promised, here are a few tips about using [GitHub](https://github.com/).
-If you are not interested in this, feel free to skip to the next chapter, it won't become relevant later.
+如约而至，以下是一些关于使用 [GitHub](https://github.com/) 的技巧。
+如果您对此不感兴趣，请随意跳到下一章，这些内容以后不会变得相关。
 
-I want to mention that GitHub is not the only provider of Git-hosting services, but certainly the most popular one.
-Unfortunately, it is proprietary.
-Proprietary software denies you the freedom to read, modify and share its source code.
-Here is a list of open-source Git-hosting software and service providers who use them.
-If your digital freedom is important to you, consider using one of these alternatives for hosting your repositories.
+我想提一下，GitHub 并非 Git 托管服务的唯一提供商，但肯定是最流行的。
+不幸的是，它是专有的。
+专有软件剥夺了您阅读、修改和共享其源代码的自由。
+以下是一些开源 Git 托管软件和使用它们的服务提供商列表。
+如果您的数字自由对您很重要，请考虑使用这些替代方案之一来托管您的仓库。
 
 - [Forgejo](https://forgejo.org/)
 - [Codeberg](https://codeberg.org/)
@@ -16,55 +16,55 @@ If your digital freedom is important to you, consider using one of these alterna
 - [Tangled](https://tangled.sh/)
 - [Radicle](https://radicle.xyz/)
 
-## Authenticating with an SSH key
+## 使用 SSH 密钥进行身份验证
 
-Jujutsu needs to authenticate as your GitHub user in order to send and receive commits on your behalf.
-It's possible to do that with username and password, but it's very tedious and I don't recommend it at all.
-If making backup is tedious, you will do it **less often**.
-Fewer backups means more risk of losing your work!
-So let's make the authentication as seamless as possible.
+Jujutsu 需要以您的 GitHub 用户身份进行身份验证，以便代表您发送和接收提交。
+使用用户名和密码也可以做到，但这非常繁琐，我完全不推荐。
+如果备份很繁琐，您就会**更少地**进行备份。
+更少的备份意味着更大的丢失工作成果的风险！
+所以让我们让身份验证尽可能无缝。
 
-The best authentication method is to use an SSH key.
-It's more convenient and safer than a password.
-GitHub has great documentation about how to set that up, so please follow the instructions here:
-- [Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-- [Adding an SSH key to your account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+最好的身份验证方法是使用 SSH 密钥。
+它比密码更方便、更安全。
+GitHub 有关于如何设置的精彩文档，请按照此处的说明操作：
+- [生成新的 SSH 密钥](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+- [将 SSH 密钥添加到您的账户](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
-You can verify the setup with the following command:
+您可以使用以下命令验证设置：
 
 ```sh
 ssh -T git@github.com
 ```
 
-The expected output is:
+预期的输出是：
 
 ```
 Hi user! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-## Creating a new repository on GitHub
+## 在 GitHub 上创建一个新仓库
 
-Skip ahead if you intend to use an already existing repo.
+如果您打算使用已有的仓库，请跳到下一节。
 
-To create a new repository on GitHub, [click here](https://github.com/new) and fill out the form.
-All you need to do is choose an owner (probably your username) and a repo name.
-Also check that the visibility matches what you want (can be changed later).
+要在 GitHub 上创建一个新仓库，[点击这里](https://github.com/new)并填写表单。
+您需要做的就是选择一个所有者（可能是您的用户名）和一个仓库名称。
+还要检查可见性是否匹配您的需求（以后可以更改）。
 
-If you already have a local repository with content that you want to push to this new remote, make sure to **not initialize the repo with any content**.
-That means, no template, no README, no `.gitignore` and no license.
+如果您已经有一个包含内容的本地仓库，并希望将其推送到这个新远程，请确保**不要使用任何内容初始化仓库**。
+这意味着，不要模板、不要 README、不要 `.gitignore`，也不要许可证。
 
-Finally, click on "Create repository".
+最后，点击 "Create repository"。
 
-## Cloning an existing repo
+## 克隆已有仓库
 
-Navigate to the page of the existing repo in the browser.
-Cick on the green button that says "Code".
-**Select SSH** in the drop-down (assuming you have set up an SSH key as explained above).
-Copy the URL that's displayed.
+在浏览器中导航到已有仓库的页面。
+点击显示 "Code" 的绿色按钮。
+在下拉菜单中选择 **SSH**（假设您已按上述说明设置了 SSH 密钥）。
+复制显示的 URL。
 
 ![](./github_ssh_url.png)
 
-Finally, paste the URL into Jujutsu's clone command:
+最后，将 URL 粘贴到 Jujutsu 的克隆命令中：
 
 ```sh
 jj git clone <COPIED_URL>

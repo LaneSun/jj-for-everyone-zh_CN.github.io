@@ -1,31 +1,31 @@
-# Level 1
+# 等级 1
 
-This level will provide you with the bare minimum of skills you need to get work done.
-It's only enough for the simplest use cases and you're working on your own.
-For example, students who track and submit their homework with a Git repository won't need more than this. 
+本等级将为您提供完成工作所需的最基本技能。
+它仅适用于最简单的用例，并且您是独立工作。
+例如，使用 Git 仓库跟踪和提交作业的学生不需要比这更多的知识。
 
-The following "cheat sheet" contains the most important commands from level 1.
-Use it to prime your brain before getting started and remind yourself later when you forget something.
+下面的"速查表"包含了等级 1 中最重要的命令。
+用它来在开始之前预热您的大脑，并在忘记某些内容时提醒自己。
 
-````admonish info title="cheat sheet"
-Configure your authorship information
+````admonish info title="速查表"
+配置您的作者信息
 ```sh
 jj config set --user user.name "Alice"
 jj config set --user user.email "alice@local"
 ```
-Initialize a repository
+初始化一个仓库
 ```sh
 jj git init <DESTINATION>
 ```
-Clone an existing repository
+克隆一个已有的仓库
 ```sh
 jj git clone <PATH_OR_URL> <DESTINATION>
 ```
-Commit the changes you made
+提交您所做的更改
 ```sh
 jj commit
 ```
-Push your latest commit to the "main" bookmark
+将您的最新提交推送到 "main" 书签
 ```sh
 jj bookmark move main --to @-
 jj git push
