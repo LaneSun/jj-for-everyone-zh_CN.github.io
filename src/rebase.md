@@ -36,14 +36,14 @@ Bob 的日志现在看起来是这样的：
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">z</span><span class="bold highlighted dimgray ">tyvwqll</span><span class="bold "> </span><span class="bold yellow ">bob@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 21:29:52</span><span class="bold "> </span><span class="bold highlighted blue ">9</span><span class="bold highlighted dimgray ">3f27644</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">mswwyok</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-22 21:29:27</span> <span class="purple ">main?? main@git</span> <span class="bold "></span><span class="bold blue ">e</span><span class="highlighted dimgray ">583fa6e</span>
-│  Add submission instructions
+│  添加提交说明
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">wywpklt</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 21:27:24</span> <span class="purple ">main?? main@origin</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">06959ce</span>
-╭─┤  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+╭─┤  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 │ │
 │ ~
 │
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">q</span><span class="highlighted dimgray ">uolxwkk</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-22 21:22:22</span> <span class="bold "></span><span class="bold blue ">8</span><span class="highlighted dimgray ">d538390</span>
-│  Document hello.py in README.md
+│  在 README.md 中记录 hello.py
 ~
 </pre>
 
@@ -74,9 +74,9 @@ jj rebase --onto main@origin
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">z</span><span class="bold highlighted dimgray ">tyvwqll</span><span class="bold "> </span><span class="bold yellow ">bob@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 21:30:38</span><span class="bold "> </span><span class="bold highlighted blue ">e</span><span class="bold highlighted dimgray ">911e4c7</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">mswwyok</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-22 21:30:38</span> <span class="purple ">main*</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">2bd1179</span>
-│  Add submission instructions
+│  添加提交说明
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">wywpklt</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 21:27:24</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">06959ce</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 

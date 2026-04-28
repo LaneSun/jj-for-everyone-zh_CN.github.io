@@ -65,9 +65,9 @@ jj git push --change @-
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">q</span><span class="bold highlighted dimgray ">rtwnykn</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-25 20:37:05</span><span class="bold "> </span><span class="bold highlighted blue ">c</span><span class="bold highlighted dimgray ">2f4e43e</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
-│  WIP: Add for loop (need to fix syntax)
+│  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 

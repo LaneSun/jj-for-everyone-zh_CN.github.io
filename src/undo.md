@@ -32,11 +32,11 @@ jj log
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">p</span><span class="bold highlighted dimgray ">zsymsll</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-09-10 20:52:56</span><span class="bold "> </span><span class="bold highlighted blue ">1</span><span class="bold highlighted dimgray ">be9c292</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d</span><span class="highlighted dimgray ">517a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -63,11 +63,11 @@ jj commit -m "code improvements"
 ○  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">zsymsll</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:53:46</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">50b543b</span>
 │  code improvements
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d5</span><span class="highlighted dimgray ">17a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -85,11 +85,11 @@ jj undo
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">p</span><span class="bold highlighted dimgray ">zsymsll</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-09-10 20:53:46</span><span class="bold "> </span><span class="bold highlighted blue ">9</span><span class="bold highlighted dimgray ">4a7ca39</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold yellow ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d</span><span class="highlighted dimgray ">517a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -108,11 +108,11 @@ jj commit -m "Print German and French greetings as well"
 ○  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">zsymsll</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:54:33</span> <span class="bold "></span><span class="bold blue ">df</span><span class="highlighted dimgray ">82ee49</span>
 │  Print German and French greetings as well
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d5</span><span class="highlighted dimgray ">17a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -136,11 +136,11 @@ jj undo
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">p</span><span class="bold highlighted dimgray ">zsymsll</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-09-10 20:53:46</span><span class="bold "> </span><span class="bold highlighted blue ">9</span><span class="bold highlighted dimgray ">4a7ca39</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold yellow ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d</span><span class="highlighted dimgray ">517a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -182,11 +182,11 @@ Jujutsu 没有机会创建存储该文件内容的快照。
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">p</span><span class="bold highlighted dimgray ">zsymsll</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-09-10 20:52:56</span><span class="bold "> </span><span class="bold highlighted blue ">1</span><span class="bold highlighted dimgray ">be9c292</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d</span><span class="highlighted dimgray ">517a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -204,16 +204,16 @@ jj undo
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">w</span><span class="bold highlighted dimgray ">kqpyqlm</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-09-10 20:52:56</span><span class="bold "> </span><span class="bold highlighted blue ">64</span><span class="bold highlighted dimgray ">0e22bf</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│ │  Add submission instructions
+│ │  添加提交说明
 │ │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d</span><span class="highlighted dimgray ">517a86d</span>
-│ ├─╯  WIP: Add for loop (need to fix syntax)
+│ ├─╯  WIP：添加 for 循环（需要修复语法）
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-╭─┤  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+╭─┤  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 │ │
 │ ~
 │
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">u</span><span class="highlighted dimgray ">vxzzlmr</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:55</span> <span class="bold "></span><span class="bold blue ">60</span><span class="highlighted dimgray ">e09461</span>
-│  Document hello.py in README.md
+│  在 README.md 中记录 hello.py
 ~
 </pre>
 
@@ -241,11 +241,11 @@ jj redo
 ○  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">zsymsll</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:54:33</span> <span class="bold "></span><span class="bold blue ">df</span><span class="highlighted dimgray ">82ee49</span>
 │  Print German and French greetings as well
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">l</span><span class="highlighted dimgray ">yquuqkl</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">ae165d3</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">tnrtqsn</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="purple ">push-vtnrtqsnrzqx</span> <span class="bold "></span><span class="bold blue ">d5</span><span class="highlighted dimgray ">17a86d</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">lwyrrmy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-10 20:52:56</span> <span class="bold "></span><span class="bold blue ">f</span><span class="highlighted dimgray ">fc6841f</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 

@@ -98,8 +98,8 @@ jj git push --bookmark main
 
 if [ "$chapter" = update_bookmark ] ; then success ; fi
 
-printf "\nThis is a toy repository for learning Jujutsu.\n" >> README.md
-jj commit -m "Add project description to readme"
+printf "\n这是一个用于学习 Jujutsu 的玩具仓库。\n" >> README.md
+jj commit -m "向 readme 添加项目描述"
 
 jj bookmark move main --to @-
 
@@ -121,11 +121,10 @@ if [ "$chapter" = branch ] ; then success ; fi
 
 echo 'print("Hello, world!")' > hello.py
 
-jj commit -m "Add Python script for greeting the world
+jj commit -m "添加用于问候世界的 Python 脚本
 
-Printing the text \"Hello, world!\" is a classic exercise in introductory
-programming courses. It's easy to complete in basically any language and
-makes students feel accomplished and curious for more at the same time."
+打印文本 \"Hello, world!\" 是编程入门课程中的经典练习。它几乎可以用任何
+语言轻松完成，同时让学生感到成就感并对后续内容产生好奇心。"
 
 jj git clone "$jj_tutorial_dir"/remote "$jj_tutorial_dir"/repo-bob
 cd "$jj_tutorial_dir"/repo-bob
@@ -133,15 +132,15 @@ jj config set --repo user.name Bob
 jj config set --repo user.email bob@local
 jj metaedit --update-author
 
-echo "# jj-tutorial
+echo "# jj-教程
 
-The file hello.py contains a script that greets the world.
-It can be executed with the command 'python hello.py'.
-Programming is fun!" > README.md
-jj commit -m "Document hello.py in README.md
+文件 hello.py 包含一个问候世界的脚本。
+可以通过命令 'python hello.py' 来执行。
+编程很有趣！" > README.md
+jj commit -m "在 README.md 中记录 hello.py
 
-The file hello.py doesn't exist yet, because Alice is working on that.
-Once our changes are combined, this documentation will be accurate."
+文件 hello.py 尚不存在，因为 Alice 正在处理它。
+一旦我们的更改被合并，这份文档就会变得准确。"
 
 jj bookmark move main --to @-
 jj git push
@@ -156,7 +155,7 @@ if [ "$chapter" = merge ] ; then success ; fi
 
 jj new main@origin @-
 
-jj commit -m "Merge code and documentation for hello-world"
+jj commit -m "合并 hello-world 的代码和文档"
 jj bookmark move main --to @-
 jj git push
 
@@ -167,9 +166,9 @@ cd "$jj_tutorial_dir"/repo-bob
 tar czf submission_alice_bob.tar.gz README.md
 
 echo "
-## Submission
+## 提交说明
 
-Run the following command to create the submission tarball:
+运行以下命令来创建提交压缩包：
 
 ~~~sh
 tar czf submission_alice_bob.tar.gz [FILE...]
@@ -181,7 +180,7 @@ echo "*.tar.gz" > .gitignore
 
 jj file untrack submission_alice_bob.tar.gz
 
-jj commit -m "Add submission instructions"
+jj commit -m "添加提交说明"
 
 if [ "$chapter" = rebase ] ; then success ; fi
 
@@ -197,7 +196,7 @@ cd "$jj_tutorial_dir"/repo
 echo 'for (i = 0; i < 10; i = i + 1):
     print("Hello, world!")' > hello.py
 
-jj commit -m "WIP: Add for loop (need to fix syntax)"
+jj commit -m "WIP：添加 for 循环（需要修复语法）"
 
 jj git push --change @-
 
@@ -205,7 +204,7 @@ if [ "$chapter" = navigate ] ; then success ; fi
 
 jj git fetch
 jj new main
-jj new 'description(substring:"Document hello.py in README.md")'
+jj new 'description(substring:"在 README.md 中记录 hello.py")'
 jj new main
 
 if [ "$chapter" = undo ] ; then success ; fi
@@ -250,12 +249,12 @@ jj bookmark track 'push-*'
 
 if [ "$chapter" = conflict ] ; then success ; fi
 
-jj new 'description(substring:"WIP: Add for loop")'
+jj new 'description(substring:"WIP：添加 for 循环")'
 
 echo 'for _ in range(10):
     print("Hello, world!")' > hello.py
 
-jj commit -m "Fix loop syntax"
+jj commit -m "修复循环语法"
 
 jj new main @-
 
@@ -264,23 +263,23 @@ echo 'for _ in range(10):
     print("Hallo, Welt!")
     print("Bonjour, le monde!")' > hello.py
 
-jj commit -m "Merge repetition and translation of greeting"
+jj commit -m "合并问候语的重复和翻译"
 jj bookmark move main --to @-
 jj git push
 
 if [ "$chapter" = abandon ] ; then success ; fi
 
-jj commit -m "Experiment: Migrate to shiny new framework"
+jj commit -m "实验：迁移到闪亮的新框架"
 jj git push --change @-
 jj new main
-jj commit -m "Experiment: Improve scalability using microservices"
+jj commit -m "实验：使用微服务提高可扩展性"
 jj git push --change @-
 jj new main
-jj commit -m "Experiment: Apply SOLID design patterns"
+jj commit -m "实验：应用 SOLID 设计模式"
 jj git push --change @-
 jj new main
 
-jj abandon 'description(substring:"Experiment")'
+jj abandon 'description(substring:"实验：")'
 
 jj git push --deleted
 
@@ -291,9 +290,9 @@ jj show &> /dev/null
 
 jj restore README.md
 
-jj restore --from 'description(substring:"Fix loop syntax")' hello.py
+jj restore --from 'description(substring:"修复循环语法")' hello.py
 
-jj commit -m "Remove translations"
+jj commit -m "移除翻译"
 jj bookmark move main --to @-
 jj git push
 
@@ -301,12 +300,12 @@ if [ "$chapter" = commit_interactive ] ; then success ; fi
 
 # `jj commit --interactive doesn't work in a script, so we reproduce the same
 # commits a little differently.
-echo "Implement task 1" > task_1.txt
-jj commit --message "Implement task 1" task_1.txt
-echo "Implement task 2" > tasks_2_and_3.txt
-jj commit --message "Implement task 2"
-echo "Implement task 3" >> tasks_2_and_3.txt
-jj commit --message "Implement task 3"
+echo "实现任务 1" > task_1.txt
+jj commit --message "实现任务 1" task_1.txt
+echo "实现任务 2" > tasks_2_and_3.txt
+jj commit --message "实现任务 2"
+echo "实现任务 3" >> tasks_2_and_3.txt
+jj commit --message "实现任务 3"
 
 jj bookmark move main --to @-
 jj git push

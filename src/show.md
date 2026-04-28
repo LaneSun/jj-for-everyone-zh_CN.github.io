@@ -26,18 +26,18 @@ Bookmarks: <span class="purple ">main??</span> <span class="purple ">main@origin
 Author   : <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local</span>&gt; (<span class="cyan ">2025-07-22 21:22:17</span>)
 Committer: <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local</span>&gt; (<span class="cyan ">2025-07-22 21:22:22</span>)
 
-    Document hello.py in README.md
+    在 README.md 中记录 hello.py
 
-    The file hello.py doesn't exist yet, because Alice is working on that.
-    Once our changes are combined, this documentation will be accurate.
+    文件 hello.py 尚不存在，因为 Alice 正在处理它。
+    一旦我们的更改被合并，这份文档就会变得准确。
 
 <span class="yellow ">Modified regular file README.md:</span>
-<span class="red ">   1</span> <span class="green ">   1</span>: # jj-tutorial
+<span class="red ">   1</span> <span class="green ">   1</span>: # jj-教程
 <span class="red ">   2</span> <span class="green ">   2</span>: 
-<span class="red ">   3</span>     : <span class="underline "></span><span class="underline red ">This</span><span class="red "> </span><span class="underline red ">is</span><span class="red "> a </span><span class="underline red ">toy</span><span class="red "> </span><span class="underline red ">repository</span><span class="red "> </span><span class="underline red ">for</span><span class="red "> </span><span class="underline red ">learning</span><span class="red "> </span><span class="underline red ">Jujutsu</span><span class="red ">.</span>
-     <span class="green ">   3</span>: <span class="underline "></span><span class="underline green ">The</span><span class="green "> </span><span class="underline green ">file</span><span class="green "> </span><span class="underline green ">hello.py contains </span><span class="green ">a </span><span class="underline green ">script</span><span class="green "> </span><span class="underline green ">that</span><span class="green "> </span><span class="underline green ">greets</span><span class="green "> </span><span class="underline green ">the</span><span class="green "> </span><span class="underline green ">world</span><span class="green ">.</span>
-     <span class="green ">   4</span>: <span class="underline "></span><span class="underline green ">It can be executed with the command 'python hello.py'.</span><span class="green "></span>
-     <span class="green ">   5</span>: <span class="underline "></span><span class="underline green ">Programming is fun!</span><span class="green "></span>
+<span class="red ">   3</span>     : <span class="underline "></span><span class="underline red ">这</span><span class="red ">是</span><span class="red ">一</span><span class="red ">个</span><span class="red ">用</span><span class="red ">于</span><span class="red ">学</span><span class="red ">习</span><span class="red "> </span><span class="underline red ">Jujutsu</span><span class="red "> </span><span class="underline red ">的</span><span class="red ">玩</span><span class="red ">具</span><span class="red ">仓</span><span class="red ">库</span><span class="red ">。</span>
+     <span class="green ">   3</span>: <span class="underline "></span><span class="underline green ">文</span><span class="green ">件</span><span class="green "> </span><span class="underline green ">hello.py </span><span class="green ">包</span><span class="green ">含</span><span class="green ">一</span><span class="green ">个</span><span class="green ">问</span><span class="green ">候</span><span class="green ">世</span><span class="green ">界</span><span class="green ">的</span><span class="green ">脚</span><span class="green ">本</span><span class="green ">。</span>
+     <span class="green ">   4</span>: <span class="underline "></span><span class="underline green ">可</span><span class="green ">以</span><span class="green ">通</span><span class="green ">过</span><span class="green ">命</span><span class="green ">令</span><span class="green "> </span><span class="green ">'python hello.py'</span><span class="green "> </span><span class="green ">来</span><span class="green ">执</span><span class="green ">行</span><span class="green ">。</span>
+     <span class="green ">   5</span>: <span class="underline "></span><span class="underline green ">编</span><span class="green ">程</span><span class="green ">很</span><span class="green ">有</span><span class="green ">趣</span><span class="green ">！</span>
 </pre>
 
 这里有很多 `jj log` 没有显示的有用信息。

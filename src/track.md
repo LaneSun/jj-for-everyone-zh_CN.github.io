@@ -37,7 +37,7 @@ jj metaedit --update-author
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">y</span><span class="bold highlighted dimgray ">uxnowup</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-08-23 20:01:42</span><span class="bold "> </span><span class="bold highlighted blue ">1</span><span class="bold highlighted dimgray ">043cd89</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">w</span><span class="highlighted dimgray ">kywrwmu</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-08-23 20:01:22</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">3</span><span class="highlighted dimgray ">6c08763</span>
-│  Add submission instructions
+│  添加提交说明
 ~
 </pre>
 
@@ -73,17 +73,17 @@ jj git push
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">mztslml</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:57</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">a</span><span class="highlighted dimgray ">928e18a</span>
 │  Print German and French greetings as well
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">vw</span><span class="highlighted dimgray ">kzzxum</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">7</span><span class="highlighted dimgray ">a76ce52</span>
-│  Add submission instructions
+│  添加提交说明
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">zk</span><span class="highlighted dimgray ">wmvzlq</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="purple ">push-zkwmvzlqluot@origin</span> <span class="bold "></span><span class="bold blue ">a7</span><span class="highlighted dimgray ">cd6be9</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>    <span class="bold "></span><span class="bold purple ">pq</span><span class="highlighted dimgray ">oyoror</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">94</span><span class="highlighted dimgray ">608da3</span>
-├─╮  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+├─╮  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">o</span><span class="highlighted dimgray ">wrwuqyr</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">22</span><span class="highlighted dimgray ">f32788</span>
-│ │  Add Python script for greeting the world
+│ │  添加用于问候世界的 Python 脚本
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span> │  <span class="bold "></span><span class="bold purple ">vp</span><span class="highlighted dimgray ">zorutw</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">91</span><span class="highlighted dimgray ">48e791</span>
-├─╯  Document hello.py in README.md
+├─╯  在 README.md 中记录 hello.py
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">pk</span><span class="highlighted dimgray ">poursq</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">02</span><span class="highlighted dimgray ">f136e2</span>
-│  Add project description to readme
+│  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">kpkmszl</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">6c2503f</span>
 │  Add readme with project title
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">zz</span><span class="highlighted dimgray ">zzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
@@ -135,8 +135,8 @@ jj bookmark track push-zkwmvzlqluot
 │  Print German and French greetings as well
 <span class="highlighted dimgray ">~</span>  <span class="highlighted dimgray ">(elided revisions)</span>
 │ ○  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">kwmvzlq</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="purple ">push-zkwmvzlqluot</span> <span class="bold "></span><span class="bold blue ">a7</span><span class="highlighted dimgray ">cd6be9</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">qoyoror</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">4608da3</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>

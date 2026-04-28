@@ -21,11 +21,11 @@ jj git fetch
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">q</span><span class="bold highlighted dimgray ">rtwnykn</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-25 20:37:05</span><span class="bold "> </span><span class="bold highlighted blue ">c</span><span class="bold highlighted dimgray ">2f4e43e</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
-│  WIP: Add for loop (need to fix syntax)
+│  WIP：添加 for 循环（需要修复语法）
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">tqlsyyr</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">07a18a9</span>
-├─╯  Add submission instructions
+├─╯  添加提交说明
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -50,11 +50,11 @@ jj new main
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">u</span><span class="bold highlighted dimgray ">umounxy</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-25 20:52:32</span><span class="bold "> </span><span class="bold highlighted blue ">e</span><span class="bold highlighted dimgray ">1bcff24</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">tqlsyyr</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">07a18a9</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-│  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+│  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 ~
 </pre>
 
@@ -75,30 +75,30 @@ Jujutsu 会自动删除空的提交（没有更改也没有描述）。
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">u</span><span class="bold highlighted dimgray ">umounxy</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-25 20:52:32</span><span class="bold "> </span><span class="bold highlighted blue ">e</span><span class="bold highlighted dimgray ">1bcff24</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">tqlsyyr</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">07a18a9</span>
-│  Add submission instructions
+│  添加提交说明
 │ ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
-├─╯  WIP: Add for loop (need to fix syntax)
+├─╯  WIP：添加 for 循环（需要修复语法）
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>    <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-├─╮  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+├─╮  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">ux</span><span class="highlighted dimgray ">vvmtos</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">a9</span><span class="highlighted dimgray ">946efd</span>
-│ │  Add Python script for greeting the world
+│ │  添加用于问候世界的 Python 脚本
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span> │  <span class="bold "></span><span class="bold purple ">qx</span><span class="highlighted dimgray ">kprvsu</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">e05718a</span>
-├─╯  Document hello.py in README.md
+├─╯  在 README.md 中记录 hello.py
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">xs</span><span class="highlighted dimgray ">swkrsu</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">69</span><span class="highlighted dimgray ">5f460b</span>
-│  Add project description to readme
+│  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">xvxmtks</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:36:59</span> <span class="bold "></span><span class="bold blue ">20c</span><span class="highlighted dimgray ">6a3b1</span>
 │  Add readme with project title
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
 </pre>
 
-假设我们想查看描述为"Document hello.py in README.md"的提交。
+假设我们想查看描述为"在 README.md 中记录 hello.py"的提交。
 我们可以轻松地通过它的变更ID来实现，即 `jj new qxkprvsu`。
 为了让它更有趣，我们将学习另一种识别提交的方式：
 使用 `description()` 函数。
 它告诉 Jujutsu 选择与描述匹配的提交。
 
 ```sh
-jj new 'description(substring:"Document hello.py in README.md")'
+jj new 'description(substring:"在 README.md 中记录 hello.py")'
 ```
 
 不要忘记外层的单引号，它们可以防止你的终端解释内部的双引号。
@@ -111,16 +111,16 @@ jj new 'description(substring:"Document hello.py in README.md")'
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">u</span><span class="bold highlighted dimgray ">xuqnppz</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-25 21:16:00</span><span class="bold "> </span><span class="bold highlighted blue ">a</span><span class="bold highlighted dimgray ">bba4830</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">tqlsyyr</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">2</span><span class="highlighted dimgray ">07a18a9</span>
-│ │  Add submission instructions
+│ │  添加提交说明
 │ │ ○  <span class="bold "></span><span class="bold purple ">r</span><span class="highlighted dimgray ">vpkroku</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="purple ">push-rvpkrokuqrxt</span> <span class="bold "></span><span class="bold blue ">b</span><span class="highlighted dimgray ">9d02faf</span>
-│ ├─╯  WIP: Add for loop (need to fix syntax)
+│ ├─╯  WIP：添加 for 循环（需要修复语法）
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">s</span><span class="highlighted dimgray ">tlxrmun</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">30ad636</span>
-╭─┤  <span class="green ">(empty)</span> Merge code and documentation for hello-world
+╭─┤  <span class="green ">(empty)</span> 合并 hello-world 的代码和文档
 │ │
 │ ~
 │
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">q</span><span class="highlighted dimgray ">xkprvsu</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">9</span><span class="highlighted dimgray ">e05718a</span>
-│  Document hello.py in README.md
+│  在 README.md 中记录 hello.py
 ~
 </pre>
 

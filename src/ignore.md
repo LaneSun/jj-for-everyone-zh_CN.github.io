@@ -54,13 +54,13 @@ Committer: <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local<
 
 <span class="yellow ">Modified regular file README.md:</span>
     ...
-<span class="red ">   3</span> <span class="green ">   3</span>: The file hello.py contains a script that greets the world.
-<span class="red ">   4</span> <span class="green ">   4</span>: It can be executed with the command 'python hello.py'.
-<span class="red ">   5</span> <span class="green ">   5</span>: Programming is fun!
+<span class="red ">   3</span> <span class="green ">   3</span>: 文件 hello.py 包含一个问候世界的脚本。
+<span class="red ">   4</span> <span class="green ">   4</span>: 可以通过命令 'python hello.py' 来执行。
+<span class="red ">   5</span> <span class="green ">   5</span>: 编程很有趣！
      <span class="green ">   6</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
-     <span class="green ">   7</span>: <span class="underline "></span><span class="underline green ">## Submission</span><span class="green "></span>
+     <span class="green ">   7</span>: <span class="underline "></span><span class="underline green ">## 提交说明</span><span class="green "></span>
      <span class="green ">   8</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
-     <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">Run the following command to create the submission tarball:</span><span class="green "></span>
+     <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">运行以下命令来创建提交压缩包：</span><span class="green "></span>
      <span class="green ">  10</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
      <span class="green ">  11</span>: <span class="underline "></span><span class="underline green ">~~~sh</span><span class="green "></span>
      <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz [FILE...]</span><span class="green "></span>
@@ -117,13 +117,13 @@ Committer: <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local<
      <span class="green ">   1</span>: <span class="underline "></span><span class="underline green ">*.tar.gz</span><span class="green "></span>
 <span class="yellow ">Modified regular file README.md:</span>
     ...
-<span class="red ">   3</span> <span class="green ">   3</span>: The file hello.py contains a script that greets the world.
-<span class="red ">   4</span> <span class="green ">   4</span>: It can be executed with the command 'python hello.py'.
-<span class="red ">   5</span> <span class="green ">   5</span>: Programming is fun!
+<span class="red ">   3</span> <span class="green ">   3</span>: 文件 hello.py 包含一个问候世界的脚本。
+<span class="red ">   4</span> <span class="green ">   4</span>: 可以通过命令 'python hello.py' 来执行。
+<span class="red ">   5</span> <span class="green ">   5</span>: 编程很有趣！
      <span class="green ">   6</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
-     <span class="green ">   7</span>: <span class="underline "></span><span class="underline green ">## Submission</span><span class="green "></span>
+     <span class="green ">   7</span>: <span class="underline "></span><span class="underline green ">## 提交说明</span><span class="green "></span>
      <span class="green ">   8</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
-     <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">Run the following command to create the submission tarball:</span><span class="green "></span>
+     <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">运行以下命令来创建提交压缩包：</span><span class="green "></span>
      <span class="green ">  10</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
      <span class="green ">  11</span>: <span class="underline "></span><span class="underline green ">~~~sh</span><span class="green "></span>
      <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz [FILE...]</span><span class="green "></span>
@@ -160,13 +160,13 @@ Committer: <span class="yellow ">Bob</span> &lt;<span class="yellow ">bob@local<
      <span class="green ">   1</span>: <span class="underline "></span><span class="underline green ">*.tar.gz</span><span class="green "></span>
 <span class="yellow ">Modified regular file README.md:</span>
     ...
-<span class="red ">   3</span> <span class="green ">   3</span>: The file hello.py contains a script that greets the world.
-<span class="red ">   4</span> <span class="green ">   4</span>: It can be executed with the command 'python hello.py'.
-<span class="red ">   5</span> <span class="green ">   5</span>: Programming is fun!
+<span class="red ">   3</span> <span class="green ">   3</span>: 文件 hello.py 包含一个问候世界的脚本。
+<span class="red ">   4</span> <span class="green ">   4</span>: 可以通过命令 'python hello.py' 来执行。
+<span class="red ">   5</span> <span class="green ">   5</span>: 编程很有趣！
      <span class="green ">   6</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
-     <span class="green ">   7</span>: <span class="underline "></span><span class="underline green ">## Submission</span><span class="green "></span>
+     <span class="green ">   7</span>: <span class="underline "></span><span class="underline green ">## 提交说明</span><span class="green "></span>
      <span class="green ">   8</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
-     <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">Run the following command to create the submission tarball:</span><span class="green "></span>
+     <span class="green ">   9</span>: <span class="underline "></span><span class="underline green ">运行以下命令来创建提交压缩包：</span><span class="green "></span>
      <span class="green ">  10</span>: <span class="underline "></span><span class="underline green "></span><span class="green "></span>
      <span class="green ">  11</span>: <span class="underline "></span><span class="underline green ">~~~sh</span><span class="green "></span>
      <span class="green ">  12</span>: <span class="underline "></span><span class="underline green ">tar czf submission_alice_bob.tar.gz [FILE...]</span><span class="green "></span>
