@@ -50,7 +50,7 @@ jj metaedit --update-author
 ```sh
 echo 'print("Hallo, Welt!")' >> hello.py
 echo 'print("Bonjour, le monde!")' >> hello.py
-jj commit -m "Print German and French greetings as well"
+jj commit -m "同时打印德语和法语的问候语"
 ```
 
 把这个当作一个提醒：永远要推送您的提交！
@@ -71,7 +71,7 @@ jj git push
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">n</span><span class="bold highlighted dimgray ">kvmznqz</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-08-23 21:18:57</span><span class="bold "> </span><span class="bold highlighted blue ">e</span><span class="bold highlighted dimgray ">579e9a8</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">mztslml</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:57</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">a</span><span class="highlighted dimgray ">928e18a</span>
-│  Print German and French greetings as well
+│  同时打印德语和法语的问候语
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">vw</span><span class="highlighted dimgray ">kzzxum</span> <span class="yellow ">bob@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">7</span><span class="highlighted dimgray ">a76ce52</span>
 │  添加提交说明
 │ <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">zk</span><span class="highlighted dimgray ">wmvzlq</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="purple ">push-zkwmvzlqluot@origin</span> <span class="bold "></span><span class="bold blue ">a7</span><span class="highlighted dimgray ">cd6be9</span>
@@ -85,7 +85,7 @@ jj git push
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">pk</span><span class="highlighted dimgray ">poursq</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">02</span><span class="highlighted dimgray ">f136e2</span>
 │  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">t</span><span class="highlighted dimgray ">kpkmszl</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">6c2503f</span>
-│  Add readme with project title
+│  添加包含项目标题的 readme
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">zz</span><span class="highlighted dimgray ">zzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
 </pre>
 
@@ -132,7 +132,7 @@ jj bookmark track push-zkwmvzlqluot
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">n</span><span class="bold highlighted dimgray ">kvmznqz</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-08-23 21:18:57</span><span class="bold "> </span><span class="bold highlighted blue ">e</span><span class="bold highlighted dimgray ">579e9a8</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">v</span><span class="highlighted dimgray ">mztslml</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:57</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">a9</span><span class="highlighted dimgray ">28e18a</span>
-│  Print German and French greetings as well
+│  同时打印德语和法语的问候语
 <span class="highlighted dimgray ">~</span>  <span class="highlighted dimgray ">(elided revisions)</span>
 │ ○  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">kwmvzlq</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-08-23 21:18:20</span> <span class="purple ">push-zkwmvzlqluot</span> <span class="bold "></span><span class="bold blue ">a7</span><span class="highlighted dimgray ">cd6be9</span>
 ├─╯  WIP：添加 for 循环（需要修复语法）

@@ -80,7 +80,7 @@ jj log -r 'none()' # trigger snapshot
 
 if [ "$chapter" = commit ] ; then success ; fi
 
-jj commit --message "Add readme with project title
+jj commit --message "添加包含项目标题的 readme
 
 It's common practice for software projects to include a file called
 README.md in the root directory of their source code repository. As the
@@ -212,11 +212,11 @@ if [ "$chapter" = undo ] ; then success ; fi
 echo 'print("Hallo, Welt!")' >> hello.py
 echo 'print("Bonjour, le monde!")' >> hello.py
 
-jj commit -m "code improvements"
+jj commit -m "代码改进"
 
 jj undo
 
-jj commit -m "Print German and French greetings as well"
+jj commit -m "同时打印德语和法语的问候语"
 
 jj undo
 jj undo
@@ -240,7 +240,7 @@ jj metaedit --update-author
 
 echo 'print("Hallo, Welt!")' >> hello.py
 echo 'print("Bonjour, le monde!")' >> hello.py
-jj commit -m "Print German and French greetings as well"
+jj commit -m "同时打印德语和法语的问候语"
 
 jj bookmark move main -t @-
 jj git push

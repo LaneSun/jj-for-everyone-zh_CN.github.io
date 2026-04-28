@@ -38,7 +38,7 @@ jj commit -m "向 readme 添加项目描述"
 ○  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">xqyrwux</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:36:38</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">ca38e90</span>
 │  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:25:40</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">7</span><span class="highlighted dimgray ">939d4cf</span>
-│  Add readme with project title
+│  添加包含项目标题的 readme
 ~
 </pre>
 
@@ -63,7 +63,7 @@ jj bookmark move main --to @-
 ○  <span class="bold "></span><span class="bold purple ">k</span><span class="highlighted dimgray ">xqyrwux</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:36:38</span> <span class="purple ">main*</span> <span class="bold "></span><span class="bold blue ">6</span><span class="highlighted dimgray ">ca38e90</span>
 │  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:25:40</span> <span class="purple ">main@origin</span> <span class="bold "></span><span class="bold blue ">7</span><span class="highlighted dimgray ">939d4cf</span>
-│  Add readme with project title
+│  添加包含项目标题的 readme
 ~
 </pre>
 

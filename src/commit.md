@@ -64,7 +64,7 @@ Jujutsu 使用这些注释来提醒您在处理此提交时修改了哪些文件
 以下是一个您可以在文本编辑器中输入（或复制粘贴）的示例描述：
 
 ```
-Add readme with project title
+添加包含项目标题的 readme
 
 It's common practice for software projects to include a file called
 README.md in the root directory of their source code repository. As the
@@ -121,7 +121,7 @@ Linux 开发者在优秀的提交消息上投入了大量的思考和精力。
 <span class="bold "></span><span class="bold green ">@</span>  <span class="bold "></span><span class="bold highlighted purple ">p</span><span class="bold highlighted dimgray ">wpuwyto</span><span class="bold "> </span><span class="bold yellow ">alice@local</span><span class="bold "> </span><span class="bold highlighted cyan ">2025-07-22 20:22:36</span><span class="bold "> </span><span class="bold highlighted blue ">3</span><span class="bold highlighted dimgray ">5de496a</span><span class="bold "></span>
 │  <span class="bold "></span><span class="bold highlighted green ">(empty)</span><span class="bold "> </span><span class="bold highlighted green ">(no description set)</span><span class="bold "></span>
 ○  <span class="bold "></span><span class="bold purple ">m</span><span class="highlighted dimgray ">kmqlnox</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-22 20:20:34</span> <span class="bold "></span><span class="bold blue ">5</span><span class="highlighted dimgray ">b79353a</span>
-│  Add readme with project title
+│  添加包含项目标题的 readme
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">0000000</span>
 </pre>
 

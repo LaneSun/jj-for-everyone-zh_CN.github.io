@@ -87,7 +87,7 @@ Jujutsu 会自动删除空的提交（没有更改也没有描述）。
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">xs</span><span class="highlighted dimgray ">swkrsu</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:37:05</span> <span class="bold "></span><span class="bold blue ">69</span><span class="highlighted dimgray ">5f460b</span>
 │  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">xvxmtks</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-07-25 20:36:59</span> <span class="bold "></span><span class="bold blue ">20c</span><span class="highlighted dimgray ">6a3b1</span>
-│  Add readme with project title
+│  添加包含项目标题的 readme
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
 </pre>
 

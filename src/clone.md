@@ -66,7 +66,7 @@ Jujutsu 使用某种规则来确定哪些提交可能对您来说不感兴趣。
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">y</span><span class="highlighted dimgray ">twonzvp</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-06 20:42:20</span> <span class="purple ">main</span> <span class="bold "></span><span class="bold blue ">0</span><span class="highlighted dimgray ">a518bdd</span>
 │  向 readme 添加项目描述
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">p</span><span class="highlighted dimgray ">snzzpwy</span> <span class="yellow ">alice@local</span> <span class="cyan ">2025-09-06 20:41:56</span> <span class="bold "></span><span class="bold blue ">02</span><span class="highlighted dimgray ">181db9</span>
-│  Add readme with project title
+│  添加包含项目标题的 readme
 <span class="bold "></span><span class="bold highlighted cyan ">◆</span>  <span class="bold "></span><span class="bold purple ">z</span><span class="highlighted dimgray ">zzzzzzz</span> <span class="green ">root()</span> <span class="bold "></span><span class="bold blue ">00</span><span class="highlighted dimgray ">000000</span>
 </pre>
 
