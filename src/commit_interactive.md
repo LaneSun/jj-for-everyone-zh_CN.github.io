@@ -12,7 +12,7 @@ cd ~/jj-tutorial/repo
 回想一下我们在[一开始](./commit.md)学到的基本工作流程：
 
 1. 做一些更改
-2. 创建一个新的提交
+1. 创建一个新的提交
 
 ...重复。
 这很好，但不幸的是 Alice 有点健忘。
@@ -113,7 +113,7 @@ jj commit --interactive
 
 您应该会看到类似这样的内容：
 
-![](./scm_record_1.png)
+![SCM Record 界面显示已更改文件的列表](./scm_record_1.png)
 
 让我们先看一下菜单栏。
 即使它在终端中，您也可以点击它！
@@ -126,7 +126,7 @@ jj commit --interactive
 按右箭头键"进入"文件，显示其内容。
 它应该看起来像这样：
 
-![](./scm_record_2.png)
+![SCM Record 界面显示文件中已更改的行](./scm_record_2.png)
 
 缩进表示层次级别：
 文件在顶部，接下来是"节"，即连续的已更改行，最后是各行。
@@ -136,7 +136,7 @@ jj commit --interactive
 用箭头键导航到该行，然后用 <kbd>Space</kbd> 选择它。
 它应该看起来像这样：
 
-![](./scm_record_3.png)
+![SCM Record 界面显示两行已更改行中的一行被选中用于提交](./scm_record_3.png)
 
 既然我们已经选择了我们想要最终进入提交的确切行，我们可以按 <kbd>c</kbd>（或点击菜单栏中的"File > Confirm"）来确认。
 TUI 将关闭，您的文本编辑器将打开以让您输入提交信息。

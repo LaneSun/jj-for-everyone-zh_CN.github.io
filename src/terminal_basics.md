@@ -127,6 +127,7 @@ Hello, terminal!
 
 ```console
 $ ^[[200~echo Hello, terminal!~
+bash: !~: event not found
 ```
 
 这些奇怪的字符是由于在没有按 <kbd>Shift</kbd> 的情况下输入 <kbd>Ctrl</kbd>+<kbd>V</kbd> 而产生的"转义序列"。

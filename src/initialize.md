@@ -12,7 +12,7 @@ curl https://jj-for-everyone.github.io/reset.sh | bash -s initialize
 仓库通常对应一个项目，这样不相关项目的版本历史就不会相互绑定。
 在本教程中，我们将使用 `~/jj-tutorial/repo` 作为我们仓库的位置。
 不要把它放在别的地方，否则我后面让您运行的一些命令将无法正常工作。
-（如果您不喜欢主目录中的杂乱文件，您可以随时删除它，并在继续教程时使用[重置脚本](./how_to_read.md#reset-your-progress)。）
+（如果您不喜欢主目录中的杂乱文件，您可以随时删除它，并在继续教程时使用[重置脚本](./structure.md#随时重置你的进度)。）
 
 初始化新仓库的命令是 `jj git init <DESTINATION>`。
 我们使用 `cd` 将工作目录切换到新仓库。

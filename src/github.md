@@ -46,7 +46,7 @@ Hi user! You've successfully authenticated, but GitHub does not provide shell ac
 
 如果您打算使用已有的仓库，请跳到下一节。
 
-要在 GitHub 上创建一个新仓库，[点击这里](https://github.com/new)并填写表单。
+要在 GitHub 上创建一个新仓库，请先[填写此表单](https://github.com/new)。
 您需要做的就是选择一个所有者（可能是您的用户名）和一个仓库名称。
 还要检查可见性是否匹配您的需求（以后可以更改）。
 
@@ -62,7 +62,7 @@ Hi user! You've successfully authenticated, but GitHub does not provide shell ac
 在下拉菜单中选择 **SSH**（假设您已按上述说明设置了 SSH 密钥）。
 复制显示的 URL。
 
-![](./github_ssh_url.png)
+![如何通过 GitHub Web 界面确定仓库的 SSH URL](./github_ssh_url.png)
 
 最后，将 URL 粘贴到 Jujutsu 的克隆命令中：
 
